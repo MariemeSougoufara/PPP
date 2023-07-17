@@ -8,341 +8,372 @@ class ChooseVehicleTypeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-      return GestureDetector(
-      onTap: () {
-        Navigator.pushNamed(context, AppRoutes.chooseVehicleTypeFullViewScreen);
-      },
-    child: SafeArea(
-        child: Scaffold(
-            backgroundColor: theme.colorScheme.primary,
-            body: SizedBox(
-                width: double.maxFinite,
-                child: SingleChildScrollView(
-                    child: SizedBox(
-                        height: size.height,
-                        width: double.maxFinite,
-                        child:
-                            Stack(alignment: Alignment.bottomCenter, children: [
-                          Align(
-                              alignment: Alignment.center,
-                              child: Container(
-                                  height: size.height,
-                                  width: double.maxFinite,
-                                  padding: getPadding(
-                                      left: 23, top: 8, right: 23, bottom: 8),
-                                  decoration: BoxDecoration(
-                                      image: DecorationImage(
-                                          image: AssetImage(
-                                              ImageConstant.imgGroup66),
-                                          fit: BoxFit.cover)),
-                                  child: Stack(
-                                      alignment: Alignment.topCenter,
-                                      children: [
-                                        CustomIconButton(
-                                            height: 44,
-                                            width: 44,
-                                            padding: getPadding(all: 11),
-                                            alignment: Alignment.topLeft,
-                                            onTap: () {
-                                              onTapBtnArrowleft(context);
-                                            },
-                                            child: CustomImageView(
-                                                svgPath: ImageConstant
-                                                    .imgArrowleftGray400)),
-                                        Align(
-                                            alignment: Alignment.topCenter,
-                                            child: Padding(
-                                                padding: getPadding(top: 58),
-                                                child: Row(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .center,
-                                                    mainAxisSize:
-                                                        MainAxisSize.min,
-                                                    children: [
-                                                      CustomImageView(
-                                                          svgPath: ImageConstant
-                                                              .imageNotFound,
-                                                          height:
-                                                              getVerticalSize(
-                                                                  16),
-                                                          width:
-                                                              getHorizontalSize(
-                                                                  31),
-                                                          margin: getMargin(
-                                                              top: 226,
-                                                              bottom: 10)),
-                                                      CustomImageView(
-                                                          imagePath: ImageConstant
-                                                              .imgPathYellow600,
-                                                          height:
-                                                              getVerticalSize(
-                                                                  252),
-                                                          width:
-                                                              getHorizontalSize(
-                                                                  124),
-                                                          margin: getMargin(
-                                                              left: 15))
-                                                    ]))),
-                                        CustomImageView(
-                                            svgPath: ImageConstant.imgCars,
-                                            height: getVerticalSize(290),
-                                            width: getHorizontalSize(267),
-                                            alignment: Alignment.topLeft,
-                                            margin:
-                                                getMargin(left: 22, top: 40))
-                                      ]))),
-                          Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                  decoration: AppDecoration.outline3.copyWith(
-                                      borderRadius:
-                                          BorderRadiusStyle.customBorderTL16),
-                                  child: Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      children: [
-                                        SizedBox(
-                                            height: getVerticalSize(86),
-                                            width: double.maxFinite,
-                                            child: Stack(
-                                                alignment:
-                                                    Alignment.bottomCenter,
-                                                children: [
-                                                  Align(
-                                                      alignment:
-                                                          Alignment.center,
-                                                      child: Container(
-                                                          width:
-                                                              double.maxFinite,
-                                                          padding: getPadding(
-                                                              left: 14,
-                                                              top: 12,
-                                                              right: 14,
-                                                              bottom: 12),
-                                                          decoration: AppDecoration
-                                                              .fill5
-                                                              .copyWith(
-                                                                  borderRadius:
-                                                                      BorderRadiusStyle
-                                                                          .customBorderTL16),
-                                                          child: Row(
-                                                              mainAxisAlignment:
-                                                                  MainAxisAlignment
-                                                                      .spaceBetween,
-                                                              children: [
-                                                                Padding(
-                                                                    padding:
-                                                                        getPadding(
-                                                                            left:
-                                                                                5),
-                                                                    child: Column(
-                                                                        crossAxisAlignment:
-                                                                            CrossAxisAlignment
-                                                                                .start,
-                                                                        mainAxisAlignment:
-                                                                            MainAxisAlignment.start,
-                                                                        children: [
-                                                                          Align(
-                                                                              alignment: Alignment.centerRight,
-                                                                              child: SizedBox(width: getHorizontalSize(57), child: Divider(height: getVerticalSize(6), thickness: getVerticalSize(6), color: theme.colorScheme.errorContainer))),
-                                                                          Padding(
-                                                                              padding: getPadding(top: 14),
-                                                                              child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                                                                                CustomImageView(svgPath: ImageConstant.imgCar, height: getVerticalSize(23), width: getHorizontalSize(49), radius: BorderRadius.only(topLeft: Radius.circular(getHorizontalSize(16)), topRight: Radius.circular(getHorizontalSize(16))), margin: getMargin(top: 6, bottom: 10)),
-                                                                                Container(
-                                                                                    height: getVerticalSize(39),
-                                                                                    width: getHorizontalSize(96),
-                                                                                    margin: getMargin(left: 14),
-                                                                                    child: Stack(alignment: Alignment.bottomCenter, children: [
-                                                                                      Align(alignment: Alignment.topLeft, child: Text("Allez simple", overflow: TextOverflow.ellipsis, textAlign: TextAlign.left, style: theme.textTheme.titleMedium)),
-                                                                                      Align(alignment: Alignment.bottomCenter, child: Text("Proche de vous", overflow: TextOverflow.ellipsis, textAlign: TextAlign.left, style: theme.textTheme.bodyMedium))
-                                                                                    ]))
-                                                                              ]))
-                                                                        ])),
-                                                                Padding(
-                                                                    padding:
-                                                                        getPadding(
-                                                                            top:
-                                                                                17),
-                                                                    child: Column(
-                                                                        crossAxisAlignment:
-                                                                            CrossAxisAlignment
-                                                                                .end,
-                                                                        mainAxisAlignment:
-                                                                            MainAxisAlignment.start,
-                                                                        children: [
-                                                                          Text(
-                                                                              "2000 FCFA",
-                                                                              overflow: TextOverflow.ellipsis,
-                                                                              textAlign: TextAlign.left,
-                                                                              style: TextThemeHelper.titleLargePink500),
-                                                                          Text(
-                                                                              "2 min",
-                                                                              overflow: TextOverflow.ellipsis,
-                                                                              textAlign: TextAlign.left,
-                                                                              style: theme.textTheme.bodyMedium)
-                                                                        ]))
-                                                              ]))),
-                                                  Align(
-                                                      alignment: Alignment
-                                                          .bottomCenter,
-                                                      child: SizedBox(
-                                                          width:
-                                                              double.maxFinite,
-                                                          child: Divider(
+    return GestureDetector(
+        onTap: () {
+          Navigator.pushNamed(context, AppRoutes.selectConfortTypeScreen);
+        },
+        child: SafeArea(
+            child: Scaffold(
+                backgroundColor: theme.colorScheme.primary,
+                body: SizedBox(
+                    width: double.maxFinite,
+                    child: SingleChildScrollView(
+                        child: SizedBox(
+                            height: size.height,
+                            width: double.maxFinite,
+                            child: Stack(
+                                alignment: Alignment.bottomCenter,
+                                children: [
+                                  Align(
+                                      alignment: Alignment.center,
+                                      child: Container(
+                                          height: size.height,
+                                          width: double.maxFinite,
+                                          padding: getPadding(
+                                              left: 23,
+                                              top: 8,
+                                              right: 23,
+                                              bottom: 8),
+                                          decoration: BoxDecoration(
+                                              image: DecorationImage(
+                                                  image: AssetImage(
+                                                      ImageConstant.imgGroup66),
+                                                  fit: BoxFit.cover)),
+                                          child: Stack(
+                                              alignment: Alignment.topCenter,
+                                              children: [
+                                                CustomIconButton(
+                                                    height: 44,
+                                                    width: 44,
+                                                    padding:
+                                                        getPadding(all: 11),
+                                                    alignment:
+                                                        Alignment.topLeft,
+                                                    onTap: () {
+                                                      onTapBtnArrowleft(
+                                                          context);
+                                                    },
+                                                    child: CustomImageView(
+                                                        svgPath: ImageConstant
+                                                            .imgArrowleftGray400)),
+                                                Align(
+                                                    alignment:
+                                                        Alignment.topCenter,
+                                                    child: Padding(
+                                                        padding:
+                                                            getPadding(top: 58),
+                                                        child: Row(
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .center,
+                                                            mainAxisSize:
+                                                                MainAxisSize
+                                                                    .min,
+                                                            children: [
+                                                              CustomImageView(
+                                                                  svgPath:
+                                                                      ImageConstant
+                                                                          .imageNotFound,
+                                                                  height:
+                                                                      getVerticalSize(
+                                                                          16),
+                                                                  width:
+                                                                      getHorizontalSize(
+                                                                          31),
+                                                                  margin: getMargin(
+                                                                      top: 226,
+                                                                      bottom:
+                                                                          10)),
+                                                              CustomImageView(
+                                                                  imagePath:
+                                                                      ImageConstant
+                                                                          .imgPathYellow600,
+                                                                  height:
+                                                                      getVerticalSize(
+                                                                          252),
+                                                                  width:
+                                                                      getHorizontalSize(
+                                                                          124),
+                                                                  margin:
+                                                                      getMargin(
+                                                                          left:
+                                                                              15))
+                                                            ]))),
+                                                CustomImageView(
+                                                    svgPath:
+                                                        ImageConstant.imgCars,
+                                                    height:
+                                                        getVerticalSize(290),
+                                                    width:
+                                                        getHorizontalSize(267),
+                                                    alignment:
+                                                        Alignment.topLeft,
+                                                    margin: getMargin(
+                                                        left: 22, top: 40))
+                                              ]))),
+                                  Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: Container(
+                                          decoration: AppDecoration.outline3
+                                              .copyWith(
+                                                  borderRadius:
+                                                      BorderRadiusStyle
+                                                          .customBorderTL16),
+                                          child: Column(
+                                              mainAxisSize: MainAxisSize.min,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.start,
+                                              children: [
+                                                SizedBox(
+                                                    height: getVerticalSize(86),
+                                                    width: double.maxFinite,
+                                                    child: Stack(
+                                                        alignment: Alignment
+                                                            .bottomCenter,
+                                                        children: [
+                                                          Align(
+                                                              alignment:
+                                                                  Alignment
+                                                                      .center,
+                                                              child: Container(
+                                                                  width: double
+                                                                      .maxFinite,
+                                                                  padding: getPadding(
+                                                                      left: 14,
+                                                                      top: 12,
+                                                                      right: 14,
+                                                                      bottom:
+                                                                          12),
+                                                                  decoration: AppDecoration
+                                                                      .fill5
+                                                                      .copyWith(
+                                                                          borderRadius: BorderRadiusStyle
+                                                                              .customBorderTL16),
+                                                                  child: Row(
+                                                                      mainAxisAlignment:
+                                                                          MainAxisAlignment
+                                                                              .spaceBetween,
+                                                                      children: [
+                                                                        Padding(
+                                                                            padding:
+                                                                                getPadding(left: 5),
+                                                                            child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisAlignment: MainAxisAlignment.start, children: [
+                                                                              Align(alignment: Alignment.centerRight, child: SizedBox(width: getHorizontalSize(57), child: Divider(height: getVerticalSize(6), thickness: getVerticalSize(6), color: theme.colorScheme.errorContainer))),
+                                                                              Padding(
+                                                                                  padding: getPadding(top: 14),
+                                                                                  child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                                                                                    CustomImageView(svgPath: ImageConstant.imgCar, height: getVerticalSize(23), width: getHorizontalSize(49), radius: BorderRadius.only(topLeft: Radius.circular(getHorizontalSize(16)), topRight: Radius.circular(getHorizontalSize(16))), margin: getMargin(top: 6, bottom: 10)),
+                                                                                    Container(
+                                                                                        height: getVerticalSize(39),
+                                                                                        width: getHorizontalSize(96),
+                                                                                        margin: getMargin(left: 14),
+                                                                                        child: Stack(alignment: Alignment.bottomCenter, children: [
+                                                                                          Align(alignment: Alignment.topLeft, child: Text("Allez simple", overflow: TextOverflow.ellipsis, textAlign: TextAlign.left, style: theme.textTheme.titleMedium)),
+                                                                                          Align(alignment: Alignment.bottomCenter, child: Text("Proche de vous", overflow: TextOverflow.ellipsis, textAlign: TextAlign.left, style: theme.textTheme.bodyMedium))
+                                                                                        ]))
+                                                                                  ]))
+                                                                            ])),
+                                                                        Padding(
+                                                                            padding:
+                                                                                getPadding(top: 17),
+                                                                            child: Column(crossAxisAlignment: CrossAxisAlignment.end, mainAxisAlignment: MainAxisAlignment.start, children: [
+                                                                              Text("2000 FCFA", overflow: TextOverflow.ellipsis, textAlign: TextAlign.left, style: TextThemeHelper.titleLargePink500),
+                                                                              Text("2 min", overflow: TextOverflow.ellipsis, textAlign: TextAlign.left, style: theme.textTheme.bodyMedium)
+                                                                            ]))
+                                                                      ]))),
+                                                          Align(
+                                                              alignment: Alignment
+                                                                  .bottomCenter,
+                                                              child: SizedBox(
+                                                                  width: double
+                                                                      .maxFinite,
+                                                                  child: Divider(
+                                                                      height:
+                                                                          getVerticalSize(
+                                                                              2),
+                                                                      thickness:
+                                                                          getVerticalSize(
+                                                                              2),
+                                                                      color: appTheme
+                                                                          .blueGray5001)))
+                                                        ])),
+                                                Padding(
+                                                    padding: getPadding(
+                                                        left: 48,
+                                                        top: 31,
+                                                        right: 49),
+                                                    child: Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .center,
+                                                        children: [
+                                                          CustomImageView(
+                                                              svgPath:
+                                                                  ImageConstant
+                                                                      .imgSignal,
                                                               height:
-                                                                  getVerticalSize(
-                                                                      2),
-                                                              thickness:
-                                                                  getVerticalSize(
-                                                                      2),
-                                                              color: appTheme
-                                                                  .blueGray5001)))
-                                                ])),
-                                        Padding(
-                                            padding: getPadding(
-                                                left: 48, top: 31, right: 49),
-                                            child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  CustomImageView(
-                                                      svgPath: ImageConstant
-                                                          .imgSignal,
-                                                      height: getSize(33),
-                                                      width: getSize(33),
-                                                      radius: BorderRadius.only(
-                                                          topLeft: Radius.circular(
-                                                              getHorizontalSize(
-                                                                  16)),
-                                                          topRight: Radius.circular(
-                                                              getHorizontalSize(
-                                                                  16)))),
-                                                  Padding(
-                                                      padding:
-                                                          getPadding(left: 44),
-                                                      child: SizedBox(
-                                                          height:
-                                                              getVerticalSize(
-                                                                  33),
-                                                          child: VerticalDivider(
+                                                                  getSize(33),
                                                               width:
-                                                                  getHorizontalSize(
-                                                                      2),
-                                                              thickness:
-                                                                  getVerticalSize(
-                                                                      2),
-                                                              color: appTheme
-                                                                  .blueGray5001))),
-                                                  CustomImageView(
-                                                      svgPath: ImageConstant
-                                                          .imgMusic,
-                                                      height: getSize(33),
-                                                      width: getSize(33),
-                                                      radius: BorderRadius.only(
-                                                          topLeft: Radius.circular(
-                                                              getHorizontalSize(
-                                                                  16)),
-                                                          topRight: Radius.circular(
-                                                              getHorizontalSize(
-                                                                  16))),
-                                                      margin:
-                                                          getMargin(left: 44)),
-                                                  Padding(
-                                                      padding:
-                                                          getPadding(left: 44),
-                                                      child: SizedBox(
-                                                          height:
-                                                              getVerticalSize(
-                                                                  33),
-                                                          child: VerticalDivider(
+                                                                  getSize(33),
+                                                              radius: BorderRadius.only(
+                                                                  topLeft: Radius
+                                                                      .circular(
+                                                                          getHorizontalSize(
+                                                                              16)),
+                                                                  topRight: Radius
+                                                                      .circular(
+                                                                          getHorizontalSize(
+                                                                              16)))),
+                                                          Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      left: 44),
+                                                              child: SizedBox(
+                                                                  height:
+                                                                      getVerticalSize(
+                                                                          33),
+                                                                  child: VerticalDivider(
+                                                                      width:
+                                                                          getHorizontalSize(
+                                                                              2),
+                                                                      thickness:
+                                                                          getVerticalSize(
+                                                                              2),
+                                                                      color: appTheme
+                                                                          .blueGray5001))),
+                                                          CustomImageView(
+                                                              svgPath:
+                                                                  ImageConstant
+                                                                      .imgMusic,
+                                                              height:
+                                                                  getSize(33),
                                                               width:
-                                                                  getHorizontalSize(
-                                                                      2),
-                                                              thickness:
-                                                                  getVerticalSize(
-                                                                      2),
-                                                              color: appTheme
-                                                                  .blueGray5001))),
-                                                  CustomImageView(
-                                                      svgPath: ImageConstant
-                                                          .imgOther2,
-                                                      height: getSize(30),
-                                                      width: getSize(30),
-                                                      radius: BorderRadius.only(
-                                                          topLeft: Radius.circular(
-                                                              getHorizontalSize(
-                                                                  16)),
-                                                          topRight: Radius.circular(
-                                                              getHorizontalSize(
-                                                                  16))),
-                                                      margin: getMargin(
-                                                          left: 46,
-                                                          top: 2,
-                                                          bottom: 1))
-                                                ])),
-                                        Padding(
-                                            padding: getPadding(
-                                                left: 34, top: 10, right: 39),
-                                            child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceBetween,
-                                                children: [
-                                                  Padding(
-                                                      padding:
-                                                          getPadding(bottom: 1),
-                                                      child: Text("Paiement",
-                                                          overflow: TextOverflow
-                                                              .ellipsis,
-                                                          textAlign:
-                                                              TextAlign.left,
-                                                          style: TextThemeHelper
-                                                              .bodyMediumBluegray400)),
-                                                  Padding(
-                                                      padding:
-                                                          getPadding(top: 1),
-                                                      child: Text("Code promo",
-                                                          overflow: TextOverflow
-                                                              .ellipsis,
-                                                          textAlign:
-                                                              TextAlign.left,
-                                                          style: TextThemeHelper
-                                                              .bodyMediumBluegray400)),
-                                                  Padding(
-                                                      padding:
-                                                          getPadding(top: 1),
-                                                      child: Text("Options",
-                                                          overflow: TextOverflow
-                                                              .ellipsis,
-                                                          textAlign:
-                                                              TextAlign.left,
-                                                          style: TextThemeHelper
-                                                              .bodyMediumBluegray400))
-                                                ])),
-                                        CustomElevatedButton(
-                                            text: "Valider",
-                                            margin: getMargin(
-                                                left: 16,
-                                                top: 24,
-                                                right: 15,
-                                                bottom: 121),
-                                            buttonStyle: ButtonThemeHelper
-                                                .fillYellow600TL16
-                                                .copyWith(
-                                                    fixedSize:
-                                                        MaterialStateProperty
-                                                            .all<Size>(Size(
-                                                                double
-                                                                    .maxFinite,
-                                                                getVerticalSize(
-                                                                    45)))),
-                                            buttonTextStyle: TextThemeHelper
-                                                .titleMediumPrimary_1)
-                                      ])))
-                        ])))))));
+                                                                  getSize(33),
+                                                              radius: BorderRadius.only(
+                                                                  topLeft: Radius
+                                                                      .circular(
+                                                                          getHorizontalSize(
+                                                                              16)),
+                                                                  topRight: Radius
+                                                                      .circular(
+                                                                          getHorizontalSize(
+                                                                              16))),
+                                                              margin: getMargin(
+                                                                  left: 44)),
+                                                          Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      left: 44),
+                                                              child: SizedBox(
+                                                                  height:
+                                                                      getVerticalSize(
+                                                                          33),
+                                                                  child: VerticalDivider(
+                                                                      width:
+                                                                          getHorizontalSize(
+                                                                              2),
+                                                                      thickness:
+                                                                          getVerticalSize(
+                                                                              2),
+                                                                      color: appTheme
+                                                                          .blueGray5001))),
+                                                          CustomImageView(
+                                                              svgPath:
+                                                                  ImageConstant
+                                                                      .imgOther2,
+                                                              height:
+                                                                  getSize(30),
+                                                              width:
+                                                                  getSize(30),
+                                                              radius: BorderRadius.only(
+                                                                  topLeft: Radius
+                                                                      .circular(
+                                                                          getHorizontalSize(
+                                                                              16)),
+                                                                  topRight: Radius
+                                                                      .circular(
+                                                                          getHorizontalSize(
+                                                                              16))),
+                                                              margin: getMargin(
+                                                                  left: 46,
+                                                                  top: 2,
+                                                                  bottom: 1))
+                                                        ])),
+                                                Padding(
+                                                    padding: getPadding(
+                                                        left: 34,
+                                                        top: 10,
+                                                        right: 39),
+                                                    child: Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .spaceBetween,
+                                                        children: [
+                                                          Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      bottom:
+                                                                          1),
+                                                              child: Text(
+                                                                  "Paiement",
+                                                                  overflow:
+                                                                      TextOverflow
+                                                                          .ellipsis,
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .left,
+                                                                  style: TextThemeHelper
+                                                                      .bodyMediumBluegray400)),
+                                                          Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      top: 1),
+                                                              child: Text(
+                                                                  "Code promo",
+                                                                  overflow:
+                                                                      TextOverflow
+                                                                          .ellipsis,
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .left,
+                                                                  style: TextThemeHelper
+                                                                      .bodyMediumBluegray400)),
+                                                          Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      top: 1),
+                                                              child: Text(
+                                                                  "Options",
+                                                                  overflow:
+                                                                      TextOverflow
+                                                                          .ellipsis,
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .left,
+                                                                  style: TextThemeHelper
+                                                                      .bodyMediumBluegray400))
+                                                        ])),
+                                                CustomElevatedButton(
+                                                    text: "Valider",
+                                                    margin: getMargin(
+                                                        left: 16,
+                                                        top: 24,
+                                                        right: 15,
+                                                        bottom: 121),
+                                                    buttonStyle: ButtonThemeHelper
+                                                        .fillYellow600TL16
+                                                        .copyWith(
+                                                            fixedSize: MaterialStateProperty
+                                                                .all<Size>(Size(
+                                                                    double
+                                                                        .maxFinite,
+                                                                    getVerticalSize(
+                                                                        45)))),
+                                                    buttonTextStyle:
+                                                        TextThemeHelper
+                                                            .titleMediumPrimary_1)
+                                              ])))
+                                ])))))));
   }
 
   /// Navigates back to the previous screen.

@@ -12,7 +12,7 @@ class SetupGpsLocationsScreen extends StatelessWidget {
     //Ajouter par maryam pour la route
     return GestureDetector(
         onTap: () {
-          Navigator.pushNamed(context, AppRoutes.signUpTabContainerScreen);
+          Navigator.pushNamed(context, AppRoutes.signInPage);
         },
         child: SafeArea(
           child: Scaffold(

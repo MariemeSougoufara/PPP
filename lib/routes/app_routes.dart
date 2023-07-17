@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ppp/presentation/sign_in_page/sign_in_page.dart';
 import 'package:ppp/presentation/splash_screens_screen/splash_screens_screen.dart';
 import 'package:ppp/presentation/onboarding_one_screen/onboarding_one_screen.dart';
 import 'package:ppp/presentation/onboarding_two_screen/onboarding_two_screen.dart';
@@ -101,6 +102,7 @@ class AppRoutes {
   static const String appNavigationScreen = '/app_navigation_screen';
 
   static Map<String, WidgetBuilder> routes = {
+    signInPage: (context) => SignInPage(),
     splashScreensScreen: (context) => SplashScreensScreen(),
     onboardingOneScreen: (context) => OnboardingOneScreen(),
     onboardingTwoScreen: (context) => OnboardingTwoScreen(),
