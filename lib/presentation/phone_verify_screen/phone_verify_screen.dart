@@ -9,7 +9,11 @@ class PhoneVerifyScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+      return GestureDetector(
+      onTap: () {
+        Navigator.pushNamed(context, AppRoutes.homeScreen);
+      },
+    child: SafeArea(
         child: Scaffold(
             backgroundColor: theme.colorScheme.onError,
             resizeToAvoidBottomInset: false,
@@ -92,7 +96,7 @@ class PhoneVerifyScreen extends StatelessWidget {
                               fixedSize: MaterialStateProperty.all<Size>(
                                   Size(double.maxFinite, getVerticalSize(45)))),
                           buttonTextStyle: TextThemeHelper.titleMediumPrimary_1)
-                    ]))));
+                    ])))));
   }
 
   /// Navigates back to the previous screen.

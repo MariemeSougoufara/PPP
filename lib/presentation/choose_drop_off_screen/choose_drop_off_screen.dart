@@ -10,7 +10,11 @@ class ChooseDropOffScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+      return GestureDetector(
+      onTap: () {
+        Navigator.pushNamed(context, AppRoutes.chooseDropOffWithMapScreen);
+      },
+    child: SafeArea(
       child: Scaffold(
         backgroundColor: theme.colorScheme.primary,
         body: SizedBox(
@@ -796,6 +800,6 @@ class ChooseDropOffScreen extends StatelessWidget {
           ),
         ),
       ),
-    );
+    ));
   }
 }

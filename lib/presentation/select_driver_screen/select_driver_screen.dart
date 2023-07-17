@@ -8,7 +8,11 @@ class SelectDriverScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+      return GestureDetector(
+      onTap: () {
+        Navigator.pushNamed(context, AppRoutes.bookingSuccessfullyScreen);
+      },
+    child: SafeArea(
         child: Scaffold(
             extendBody: true,
             extendBodyBehindAppBar: true,
@@ -391,7 +395,7 @@ class SelectDriverScreen extends StatelessWidget {
                                                               .titleMediumPrimary_1)
                                                 ])))
                                   ]))
-                        ])))));
+                        ]))))));
   }
 
   /// Navigates back to the previous screen.

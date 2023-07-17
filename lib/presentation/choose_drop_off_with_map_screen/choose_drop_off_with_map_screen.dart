@@ -10,7 +10,11 @@ class ChooseDropOffWithMapScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+      return GestureDetector(
+      onTap: () {
+        Navigator.pushNamed(context, AppRoutes.chooseVehicleTypeScreen);
+      },
+    child: SafeArea(
       child: Scaffold(
         body: SizedBox(
           height: size.height,
@@ -101,6 +105,6 @@ class ChooseDropOffWithMapScreen extends StatelessWidget {
           ),
         ),
       ),
-    );
+    ));
   }
 }

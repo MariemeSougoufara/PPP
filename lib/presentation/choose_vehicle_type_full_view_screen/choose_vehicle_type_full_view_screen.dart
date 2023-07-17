@@ -8,7 +8,11 @@ class ChooseVehicleTypeFullViewScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+      return GestureDetector(
+      onTap: () {
+        Navigator.pushNamed(context, AppRoutes.selectConfortTypeScreen);
+      },
+    child: SafeArea(
         child: Scaffold(
             backgroundColor: theme.colorScheme.primary,
             body: SizedBox(
@@ -222,7 +226,7 @@ class ChooseVehicleTypeFullViewScreen extends StatelessWidget {
                                                         color: appTheme
                                                             .blueGray5001))))
                                       ]))))
-                    ])))));
+                    ]))))));
   }
 
   /// Navigates back to the previous screen.

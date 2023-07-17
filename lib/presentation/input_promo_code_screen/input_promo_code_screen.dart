@@ -7,7 +7,11 @@ class InputPromoCodeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+      return GestureDetector(
+      onTap: () {
+        Navigator.pushNamed(context, AppRoutes.selectConfortTypeScreen);
+      },
+    child: SafeArea(
         child: Scaffold(
             backgroundColor: theme.colorScheme.primary,
             body: SizedBox(
@@ -209,7 +213,7 @@ class InputPromoCodeScreen extends StatelessWidget {
                                                                   .titleMediumPrimary_1)))
                                                 ]))
                                       ])))
-                        ]))))));
+                        ])))))));
   }
 
   /// Navigates back to the previous screen.

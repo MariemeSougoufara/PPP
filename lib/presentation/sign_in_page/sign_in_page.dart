@@ -19,7 +19,11 @@ class SignInPageState extends State<SignInPage>
   bool get wantKeepAlive => true;
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+      return GestureDetector(
+      onTap: () {
+        Navigator.pushNamed(context, AppRoutes.phoneVerifyScreen);
+      },
+    child: SafeArea(
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: SizedBox(
@@ -244,6 +248,6 @@ class SignInPageState extends State<SignInPage>
           ),
         ),
       ),
-    );
+    ));
   }
 }
