@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pppv2/core/app_export.dart';
-import 'package:pppv2/widgets/custom_icon_button.dart';
+import 'package:ppp/core/app_export.dart';
+import 'package:ppp/widgets/custom_icon_button.dart';
 
 // ignore: must_be_immutable
 class SliderreplyItemWidget extends StatelessWidget {
@@ -18,7 +18,7 @@ class SliderreplyItemWidget extends StatelessWidget {
           top: 20,
           bottom: 20,
         ),
-        decoration: AppDecoration.outline7.copyWith(
+        decoration: AppDecoration.outline8.copyWith(
           borderRadius: BorderRadiusStyle.roundedBorder8,
         ),
         child: Column(
@@ -40,9 +40,9 @@ class SliderreplyItemWidget extends StatelessWidget {
                     padding: getPadding(
                       all: 10,
                     ),
-                    decoration: IconButtonStyleHelper.fillPrimaryTL25,
+                    decoration: IconButtonStyleHelper.fillYellow600TL25,
                     child: CustomImageView(
-                      svgPath: ImageConstant.imgReplyWhiteA700,
+                      svgPath: ImageConstant.imgReplyPrimary,
                     ),
                   ),
                   Padding(

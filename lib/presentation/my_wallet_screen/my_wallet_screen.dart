@@ -1,8 +1,8 @@
 import '../my_wallet_screen/widgets/sliderreply_item_widget.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:pppv2/core/app_export.dart';
-import 'package:pppv2/widgets/custom_elevated_button.dart';
+import 'package:ppp/core/app_export.dart';
+import 'package:ppp/widgets/custom_elevated_button.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 // ignore_for_file: must_be_immutable
@@ -15,7 +15,7 @@ class MyWalletScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            backgroundColor: appTheme.whiteA700,
+            backgroundColor: theme.colorScheme.primary,
             body: SizedBox(
                 width: double.maxFinite,
                 child: SizedBox(
@@ -29,103 +29,116 @@ class MyWalletScreen extends StatelessWidget {
                               decoration: AppDecoration.fill4,
                               child: Column(
                                   mainAxisSize: MainAxisSize.min,
+                                  crossAxisAlignment: CrossAxisAlignment.end,
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
                                     Spacer(),
-                                    SizedBox(
-                                        height: getVerticalSize(8),
-                                        child: SmoothIndicator(
-                                            offset: 0,
-                                            count: 3,
-                                            size: Size.zero,
-                                            effect: ScrollingDotsEffect(
-                                                spacing: 6,
-                                                activeDotColor:
-                                                    theme.colorScheme.primary,
-                                                dotColor:
-                                                    theme.colorScheme.onError,
-                                                dotHeight: getVerticalSize(8),
-                                                dotWidth:
-                                                    getHorizontalSize(8)))),
-                                    GestureDetector(
-                                        onTap: () {
-                                          onTapCellstablecell(context);
-                                        },
-                                        child: Container(
-                                            height: getVerticalSize(44),
-                                            width: double.maxFinite,
-                                            margin: getMargin(top: 45),
-                                            decoration: AppDecoration.fill1,
-                                            child: Stack(
-                                                alignment:
-                                                    Alignment.centerRight,
-                                                children: [
-                                                  Align(
-                                                      alignment: Alignment
-                                                          .bottomCenter,
-                                                      child: SizedBox(
-                                                          width:
-                                                              double.maxFinite,
-                                                          child: Divider(
-                                                              height:
-                                                                  getVerticalSize(
-                                                                      1),
-                                                              thickness:
-                                                                  getVerticalSize(
-                                                                      1),
-                                                              color: appTheme
-                                                                  .blueGray5001))),
-                                                  Align(
-                                                      alignment:
-                                                          Alignment.centerRight,
-                                                      child: Container(
+                                    Padding(
+                                        padding: getPadding(right: 13),
+                                        child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.end,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Container(
+                                                  height: getVerticalSize(8),
+                                                  margin: getMargin(bottom: 13),
+                                                  child: SmoothIndicator(
+                                                      offset: 0,
+                                                      count: 3,
+                                                      size: Size.zero,
+                                                      effect: ScrollingDotsEffect(
+                                                          spacing: 6,
+                                                          activeDotColor:
+                                                              appTheme
+                                                                  .yellow600,
+                                                          dotColor: appTheme
+                                                              .blueGray100,
+                                                          dotHeight:
+                                                              getVerticalSize(
+                                                                  8),
+                                                          dotWidth:
+                                                              getHorizontalSize(
+                                                                  8)))),
+                                              Padding(
+                                                  padding: getPadding(
+                                                      left: 39, top: 2),
+                                                  child: Text(
+                                                      "Carte de crédit"
+                                                          .toUpperCase(),
+                                                      overflow:
+                                                          TextOverflow.ellipsis,
+                                                      textAlign: TextAlign.left,
+                                                      style: TextThemeHelper
+                                                          .titleSmallBlack900))
+                                            ])),
+                                    Container(
+                                        height: getVerticalSize(44),
+                                        width: double.maxFinite,
+                                        margin: getMargin(top: 31),
+                                        decoration: AppDecoration.fill1,
+                                        child: Stack(
+                                            alignment: Alignment.centerRight,
+                                            children: [
+                                              Align(
+                                                  alignment:
+                                                      Alignment.bottomCenter,
+                                                  child: SizedBox(
+                                                      width: double.maxFinite,
+                                                      child: Divider(
                                                           height:
                                                               getVerticalSize(
-                                                                  44),
-                                                          width:
-                                                              getHorizontalSize(
-                                                                  124),
-                                                          padding: getPadding(
-                                                              left: 16,
-                                                              top: 15,
-                                                              right: 16,
-                                                              bottom: 15),
-                                                          decoration:
-                                                              AppDecoration
-                                                                  .fill1,
-                                                          child:
-                                                              Stack(children: [
-                                                            CustomImageView(
-                                                                svgPath:
-                                                                    ImageConstant
-                                                                        .imgArrowrightBlack900,
-                                                                height:
-                                                                    getVerticalSize(
-                                                                        13),
-                                                                width:
-                                                                    getHorizontalSize(
-                                                                        8),
-                                                                alignment:
-                                                                    Alignment
-                                                                        .topRight)
-                                                          ]))),
-                                                  CustomElevatedButton(
-                                                      text: "Modes de paiement",
-                                                      buttonStyle: ButtonThemeHelper
-                                                          .fillWhiteA700
-                                                          .copyWith(
-                                                              fixedSize: MaterialStateProperty
-                                                                  .all<Size>(Size(
-                                                                      getHorizontalSize(
-                                                                          170),
-                                                                      getVerticalSize(
-                                                                          44)))),
-                                                      buttonTextStyle:
-                                                          TextThemeHelper
-                                                              .bodyLargeOnPrimaryContainer,
-                                                      alignment:
-                                                          Alignment.centerLeft)
-                                                ]))),
+                                                                  1),
+                                                          thickness:
+                                                              getVerticalSize(
+                                                                  1),
+                                                          color: appTheme
+                                                              .blueGray5001))),
+                                              Align(
+                                                  alignment:
+                                                      Alignment.centerRight,
+                                                  child: Container(
+                                                      height:
+                                                          getVerticalSize(44),
+                                                      width: getHorizontalSize(
+                                                          124),
+                                                      padding: getPadding(
+                                                          left: 16,
+                                                          top: 15,
+                                                          right: 16,
+                                                          bottom: 15),
+                                                      decoration:
+                                                          AppDecoration.fill1,
+                                                      child: Stack(children: [
+                                                        CustomImageView(
+                                                            svgPath: ImageConstant
+                                                                .imgArrowrightBlack900,
+                                                            height:
+                                                                getVerticalSize(
+                                                                    13),
+                                                            width:
+                                                                getHorizontalSize(
+                                                                    8),
+                                                            alignment: Alignment
+                                                                .topRight)
+                                                      ]))),
+                                              CustomElevatedButton(
+                                                  text: "Modes de paiement",
+                                                  buttonStyle: ButtonThemeHelper
+                                                      .fillPrimary
+                                                      .copyWith(
+                                                          fixedSize: MaterialStateProperty
+                                                              .all<Size>(Size(
+                                                                  getHorizontalSize(
+                                                                      170),
+                                                                  getVerticalSize(
+                                                                      44)))),
+                                                  buttonTextStyle: TextThemeHelper
+                                                      .bodyLargeOnPrimaryContainer,
+                                                  alignment:
+                                                      Alignment.centerLeft)
+                                            ])),
                                     Container(
                                         height: getVerticalSize(44),
                                         width: double.maxFinite,
@@ -287,7 +300,7 @@ class MyWalletScreen extends StatelessWidget {
                                                                     decoration:
                                                                         BoxDecoration(
                                                                             color:
-                                                                                appTheme.whiteA700))),
+                                                                                theme.colorScheme.primary))),
                                                             Align(
                                                                 alignment: Alignment
                                                                     .bottomRight,
@@ -350,7 +363,7 @@ class MyWalletScreen extends StatelessWidget {
                                               overflow: TextOverflow.ellipsis,
                                               textAlign: TextAlign.left,
                                               style: TextThemeHelper
-                                                  .headlineLargeWhiteA700Bold
+                                                  .headlineLargePrimaryBold
                                                   .copyWith(
                                                       letterSpacing:
                                                           getHorizontalSize(
@@ -374,7 +387,7 @@ class MyWalletScreen extends StatelessWidget {
                                                               getVerticalSize(
                                                                   36)))),
                                               buttonTextStyle: TextThemeHelper
-                                                  .titleLargeWhiteA700Bold)
+                                                  .titleLargePrimaryBold)
                                         ]))
                                   ]))),
                       Align(
@@ -384,7 +397,8 @@ class MyWalletScreen extends StatelessWidget {
                               width: getHorizontalSize(279),
                               margin: getMargin(top: 120),
                               decoration: BoxDecoration(
-                                  color: appTheme.whiteA700.withOpacity(0.69),
+                                  color: theme.colorScheme.primary
+                                      .withOpacity(0.69),
                                   borderRadius: BorderRadius.circular(
                                       getHorizontalSize(8)),
                                   boxShadow: [
@@ -402,7 +416,8 @@ class MyWalletScreen extends StatelessWidget {
                               width: getHorizontalSize(311),
                               margin: getMargin(top: 136),
                               decoration: BoxDecoration(
-                                  color: appTheme.whiteA700.withOpacity(0.69),
+                                  color: theme.colorScheme.primary
+                                      .withOpacity(0.69),
                                   borderRadius: BorderRadius.circular(
                                       getHorizontalSize(8)),
                                   boxShadow: [
@@ -431,15 +446,6 @@ class MyWalletScreen extends StatelessWidget {
                                 return SliderreplyItemWidget();
                               }))
                     ])))));
-  }
-
-  /// Navigates to the paymentMethodScreen when the action is triggered.
-  ///
-  /// The [BuildContext] parameter is used to build the navigation stack.
-  /// When the action is triggered, this function uses the `Navigator` widget
-  /// to push the named route for the paymentMethodScreen.
-  onTapCellstablecell(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.paymentMethodScreen);
   }
 
   /// Navigates back to the previous screen.

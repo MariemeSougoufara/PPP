@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pppv2/core/app_export.dart';
-import 'package:pppv2/widgets/custom_text_form_field.dart';
-import 'package:pppv2/presentation/my_account_select_birthday_bottomsheet/my_account_select_birthday_bottomsheet.dart';
+import 'package:ppp/core/app_export.dart';
+import 'package:ppp/widgets/custom_text_form_field.dart';
 
 // ignore_for_file: must_be_immutable
 class MyAccountScreen extends StatelessWidget {
@@ -13,7 +12,7 @@ class MyAccountScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            backgroundColor: appTheme.gray5001.withOpacity(0.82),
+            backgroundColor: theme.colorScheme.onError,
             resizeToAvoidBottomInset: false,
             body: SizedBox(
                 width: double.maxFinite,
@@ -175,23 +174,23 @@ class MyAccountScreen extends StatelessWidget {
                           suffix: Container(
                               padding: getPadding(
                                   left: 30, top: 15, right: 16, bottom: 16),
-                              decoration:
-                                  BoxDecoration(color: appTheme.whiteA700),
+                              decoration: BoxDecoration(
+                                  color: theme.colorScheme.primary),
                               child: CustomImageView(
                                   svgPath:
                                       ImageConstant.imgArrowrightBlack900)),
                           suffixConstraints:
                               BoxConstraints(maxHeight: getVerticalSize(44)),
                           filled: true,
-                          fillColor: appTheme.whiteA700,
+                          fillColor: theme.colorScheme.primary,
                           defaultBorderDecoration:
-                              TextFormFieldStyleHelper.fillWhiteA7001,
+                              TextFormFieldStyleHelper.fillPrimary1,
                           enabledBorderDecoration:
-                              TextFormFieldStyleHelper.fillWhiteA7001,
+                              TextFormFieldStyleHelper.fillPrimary1,
                           focusedBorderDecoration:
-                              TextFormFieldStyleHelper.fillWhiteA7001,
+                              TextFormFieldStyleHelper.fillPrimary1,
                           disabledBorderDecoration:
-                              TextFormFieldStyleHelper.fillWhiteA7001),
+                              TextFormFieldStyleHelper.fillPrimary1),
                       Container(
                           height: getVerticalSize(44),
                           width: double.maxFinite,
@@ -247,70 +246,66 @@ class MyAccountScreen extends StatelessWidget {
                                         style:
                                             TextThemeHelper.bodyLargeGray400)))
                           ])),
-                      GestureDetector(
-                          onTap: () {
-                            onTapCellstablecell(context);
-                          },
-                          child: Container(
-                              height: getVerticalSize(44),
-                              width: double.maxFinite,
-                              decoration: AppDecoration.fill1,
-                              child: Stack(
-                                  alignment: Alignment.centerRight,
-                                  children: [
-                                    Align(
-                                        alignment: Alignment.bottomCenter,
-                                        child: SizedBox(
-                                            width: getHorizontalSize(359),
-                                            child: Divider(
-                                                height: getVerticalSize(1),
-                                                thickness: getVerticalSize(1),
-                                                color: appTheme.blueGray5001))),
-                                    Align(
-                                        alignment: Alignment.centerRight,
-                                        child: Container(
-                                            height: getVerticalSize(44),
-                                            width: getHorizontalSize(124),
-                                            padding: getPadding(
-                                                left: 16,
-                                                top: 15,
-                                                right: 16,
-                                                bottom: 15),
-                                            decoration: AppDecoration.fill1,
-                                            child: Stack(children: [
-                                              CustomImageView(
-                                                  svgPath: ImageConstant
-                                                      .imgArrowrightBlack900,
-                                                  height: getVerticalSize(13),
-                                                  width: getHorizontalSize(8),
-                                                  alignment: Alignment.topRight)
-                                            ]))),
-                                    Align(
-                                        alignment: Alignment.centerLeft,
-                                        child: Container(
-                                            width: getHorizontalSize(170),
-                                            padding: getPadding(
-                                                left: 15,
-                                                top: 9,
-                                                right: 15,
-                                                bottom: 9),
-                                            decoration: AppDecoration.txtFill,
-                                            child: Text("Anniversaire",
-                                                overflow: TextOverflow.ellipsis,
-                                                textAlign: TextAlign.left,
-                                                style: TextThemeHelper
-                                                    .bodyLargeOnPrimaryContainer))),
-                                    Align(
-                                        alignment: Alignment.bottomRight,
-                                        child: Padding(
-                                            padding: getPadding(
-                                                right: 37, bottom: 9),
-                                            child: Text("24 Fevrier  1984",
-                                                overflow: TextOverflow.ellipsis,
-                                                textAlign: TextAlign.left,
-                                                style: TextThemeHelper
-                                                    .bodyLargeGray400)))
-                                  ]))),
+                      Container(
+                          height: getVerticalSize(44),
+                          width: double.maxFinite,
+                          decoration: AppDecoration.fill1,
+                          child: Stack(
+                              alignment: Alignment.centerRight,
+                              children: [
+                                Align(
+                                    alignment: Alignment.bottomCenter,
+                                    child: SizedBox(
+                                        width: getHorizontalSize(359),
+                                        child: Divider(
+                                            height: getVerticalSize(1),
+                                            thickness: getVerticalSize(1),
+                                            color: appTheme.blueGray5001))),
+                                Align(
+                                    alignment: Alignment.centerRight,
+                                    child: Container(
+                                        height: getVerticalSize(44),
+                                        width: getHorizontalSize(124),
+                                        padding: getPadding(
+                                            left: 16,
+                                            top: 15,
+                                            right: 16,
+                                            bottom: 15),
+                                        decoration: AppDecoration.fill1,
+                                        child: Stack(children: [
+                                          CustomImageView(
+                                              svgPath: ImageConstant
+                                                  .imgArrowrightBlack900,
+                                              height: getVerticalSize(13),
+                                              width: getHorizontalSize(8),
+                                              alignment: Alignment.topRight)
+                                        ]))),
+                                Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: Container(
+                                        width: getHorizontalSize(170),
+                                        padding: getPadding(
+                                            left: 15,
+                                            top: 9,
+                                            right: 15,
+                                            bottom: 9),
+                                        decoration: AppDecoration.txtFill,
+                                        child: Text("Anniversaire",
+                                            overflow: TextOverflow.ellipsis,
+                                            textAlign: TextAlign.left,
+                                            style: TextThemeHelper
+                                                .bodyLargeOnPrimaryContainer))),
+                                Align(
+                                    alignment: Alignment.bottomRight,
+                                    child: Padding(
+                                        padding:
+                                            getPadding(right: 37, bottom: 9),
+                                        child: Text("24 Fevrier  1984",
+                                            overflow: TextOverflow.ellipsis,
+                                            textAlign: TextAlign.left,
+                                            style: TextThemeHelper
+                                                .bodyLargeGray400)))
+                              ])),
                       Container(
                           height: getVerticalSize(44),
                           width: double.maxFinite,
@@ -381,16 +376,5 @@ class MyAccountScreen extends StatelessWidget {
   /// to navigate back to the previous screen.
   onTapImgArrowleft(BuildContext context) {
     Navigator.pop(context);
-  }
-
-  /// Shows a modal bottom sheet with [MyAccountSelectBirthdayBottomsheet]
-  /// widget content.
-  /// The sheet is displayed on top of the current view with scrolling enabled if
-  /// content exceeds viewport height.
-  onTapCellstablecell(BuildContext context) {
-    showModalBottomSheet(
-        context: context,
-        builder: (_) => MyAccountSelectBirthdayBottomsheet(),
-        isScrollControlled: true);
   }
 }

@@ -1,32 +1,17 @@
-import 'package:pppv2/core/app_export.dart';
+import 'package:ppp/core/app_export.dart';
 import 'package:flutter/material.dart';
 
 class ButtonThemeHelper {
-  static ButtonStyle get fillPrimary => ElevatedButton.styleFrom(
-        backgroundColor: theme.colorScheme.primary,
+  static ButtonStyle get fillYellow600 => ElevatedButton.styleFrom(
+        backgroundColor: appTheme.yellow600,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(
             8,
           ),
         ),
       );
-  static ButtonStyle get outlinePrimary => OutlinedButton.styleFrom(
-        backgroundColor: Colors.transparent,
-        side: BorderSide(
-          color: theme.colorScheme.primary,
-          width: 2,
-        ),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(
-            8,
-          ),
-        ),
-      );
-  static ButtonStyle get fillPrimary1 => ElevatedButton.styleFrom(
-        backgroundColor: theme.colorScheme.primary,
-      );
-  static ButtonStyle get fillPrimaryTL16 => ElevatedButton.styleFrom(
-        backgroundColor: theme.colorScheme.primary,
+  static ButtonStyle get fillYellow600TL16 => ElevatedButton.styleFrom(
+        backgroundColor: appTheme.yellow600,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(
@@ -44,8 +29,8 @@ class ButtonThemeHelper {
           ),
         ),
       );
-  static ButtonStyle get fillOnSecondaryContainer => ElevatedButton.styleFrom(
-        backgroundColor: theme.colorScheme.onSecondaryContainer,
+  static ButtonStyle get fillOnPrimary => ElevatedButton.styleFrom(
+        backgroundColor: theme.colorScheme.onPrimary,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(
             8,
@@ -60,8 +45,8 @@ class ButtonThemeHelper {
           ),
         ),
       );
-  static ButtonStyle get fillWhiteA700 => ElevatedButton.styleFrom(
-        backgroundColor: appTheme.whiteA700,
+  static ButtonStyle get fillPrimary => ElevatedButton.styleFrom(
+        backgroundColor: theme.colorScheme.primary,
       );
   static ButtonStyle get fillBlack900 => ElevatedButton.styleFrom(
         backgroundColor: appTheme.black900.withOpacity(0.05),

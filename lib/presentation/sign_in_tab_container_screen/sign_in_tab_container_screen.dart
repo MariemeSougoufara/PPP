@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pppv2/core/app_export.dart';
-import 'package:pppv2/presentation/sign_in_page/sign_in_page.dart';
+import 'package:ppp/core/app_export.dart';
+import 'package:ppp/presentation/sign_in_page/sign_in_page.dart';
 
 class SignInTabContainerScreen extends StatefulWidget {
   const SignInTabContainerScreen({Key? key})
@@ -27,7 +27,7 @@ class SignInTabContainerScreenState extends State<SignInTabContainerScreen>
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: appTheme.whiteA700,
+        backgroundColor: theme.colorScheme.primary,
         body: SizedBox(
           height: size.height,
           width: double.maxFinite,
@@ -48,7 +48,7 @@ class SignInTabContainerScreenState extends State<SignInTabContainerScreen>
                         ),
                         width: double.maxFinite,
                         decoration: BoxDecoration(
-                          color: theme.colorScheme.primary,
+                          color: appTheme.yellow600,
                         ),
                       ),
                       Spacer(),
@@ -92,7 +92,7 @@ class SignInTabContainerScreenState extends State<SignInTabContainerScreen>
                                 "Connect with Facebook",
                                 overflow: TextOverflow.ellipsis,
                                 textAlign: TextAlign.left,
-                                style: TextThemeHelper.titleMediumWhiteA700_1,
+                                style: TextThemeHelper.titleMediumPrimary_1,
                               ),
                             ),
                           ],
@@ -103,7 +103,7 @@ class SignInTabContainerScreenState extends State<SignInTabContainerScreen>
                 ),
               ),
               CustomImageView(
-                imagePath: ImageConstant.imgGroup2WhiteA700,
+                imagePath: ImageConstant.imgGroup2Primary,
                 height: getVerticalSize(
                   177,
                 ),
@@ -120,7 +120,7 @@ class SignInTabContainerScreenState extends State<SignInTabContainerScreen>
                     top: 111,
                     right: 16,
                   ),
-                  decoration: AppDecoration.outline.copyWith(
+                  decoration: AppDecoration.outline1.copyWith(
                     borderRadius: BorderRadiusStyle.roundedBorder8,
                   ),
                   child: Column(
@@ -136,11 +136,11 @@ class SignInTabContainerScreenState extends State<SignInTabContainerScreen>
                         ),
                         child: TabBar(
                           controller: tabviewController,
-                          labelColor: theme.colorScheme.onPrimary,
+                          labelColor: appTheme.gray900,
                           labelStyle: TextStyle(),
                           unselectedLabelColor: appTheme.gray400,
                           unselectedLabelStyle: TextStyle(),
-                          indicatorColor: theme.colorScheme.primary,
+                          indicatorColor: appTheme.yellow600,
                           tabs: [
                             Tab(
                               child: Text(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:pppv2/theme/theme_helper.dart';
-import 'package:pppv2/routes/app_routes.dart';
+import 'package:ppp/theme/theme_helper.dart';
+import 'package:ppp/routes/app_routes.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         visualDensity: VisualDensity.standard,
       ),
-      title: 'pppv2',
+      title: 'ppp',
       debugShowCheckedModeBanner: false,
       initialRoute: AppRoutes.splashScreensScreen,
       routes: AppRoutes.routes,

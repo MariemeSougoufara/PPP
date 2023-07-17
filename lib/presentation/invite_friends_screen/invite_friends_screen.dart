@@ -1,10 +1,10 @@
 import '../invite_friends_screen/widgets/invite_friends_item_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:pppv2/core/app_export.dart';
-import 'package:pppv2/widgets/app_bar/appbar_image.dart';
-import 'package:pppv2/widgets/app_bar/appbar_title.dart';
-import 'package:pppv2/widgets/app_bar/custom_app_bar.dart';
-import 'package:pppv2/widgets/custom_search_view.dart';
+import 'package:ppp/core/app_export.dart';
+import 'package:ppp/widgets/app_bar/appbar_image.dart';
+import 'package:ppp/widgets/app_bar/appbar_title.dart';
+import 'package:ppp/widgets/app_bar/custom_app_bar.dart';
+import 'package:ppp/widgets/custom_search_view.dart';
 
 // ignore_for_file: must_be_immutable
 class InviteFriendsScreen extends StatelessWidget {
@@ -16,7 +16,7 @@ class InviteFriendsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            backgroundColor: appTheme.whiteA700,
+            backgroundColor: theme.colorScheme.primary,
             resizeToAvoidBottomInset: false,
             body: SizedBox(
                 height: size.height,
@@ -61,8 +61,7 @@ class InviteFriendsScreen extends StatelessWidget {
                                     autofocus: true,
                                     controller: searchController,
                                     hintText: "Recherche",
-                                    hintStyle:
-                                        TextThemeHelper.bodyLargeWhiteA700,
+                                    hintStyle: TextThemeHelper.bodyLargePrimary,
                                     margin:
                                         getMargin(left: 17, top: 24, right: 15),
                                     prefix: Container(
@@ -85,8 +84,8 @@ class InviteFriendsScreen extends StatelessWidget {
                                             icon: Icon(Icons.clear,
                                                 color: Colors.grey.shade600))),
                                     filled: true,
-                                    fillColor:
-                                        appTheme.whiteA700.withOpacity(0.25),
+                                    fillColor: theme.colorScheme.primary
+                                        .withOpacity(0.25),
                                     contentPadding: getPadding(
                                         top: 7, right: 35, bottom: 7))
                               ]))),
@@ -115,7 +114,7 @@ class InviteFriendsScreen extends StatelessWidget {
                                               overflow: TextOverflow.ellipsis,
                                               textAlign: TextAlign.left,
                                               style: TextThemeHelper
-                                                  .titleSmallOnPrimary)),
+                                                  .titleSmallGray900)),
                                       Spacer(),
                                       Container(
                                           margin: getMargin(top: 9, bottom: 9),
@@ -136,7 +135,7 @@ class InviteFriendsScreen extends StatelessWidget {
                                               child: Stack(children: [
                                                 CustomImageView(
                                                     svgPath: ImageConstant
-                                                        .imgCheckmarkWhiteA700,
+                                                        .imgCheckmarkPrimary,
                                                     height: getVerticalSize(13),
                                                     width:
                                                         getHorizontalSize(14),
@@ -169,7 +168,7 @@ class InviteFriendsScreen extends StatelessWidget {
                                               overflow: TextOverflow.ellipsis,
                                               textAlign: TextAlign.left,
                                               style: TextThemeHelper
-                                                  .titleSmallOnPrimary)),
+                                                  .titleSmallGray900)),
                                       Spacer(),
                                       Container(
                                           margin: getMargin(top: 9, bottom: 9),
@@ -187,8 +186,7 @@ class InviteFriendsScreen extends StatelessWidget {
                                               height: getSize(16),
                                               width: getSize(16),
                                               decoration: BoxDecoration(
-                                                  color: theme
-                                                      .colorScheme.onPrimary)))
+                                                  color: appTheme.gray900)))
                                     ])),
                                 Align(
                                     alignment: Alignment.centerRight,
@@ -215,7 +213,7 @@ class InviteFriendsScreen extends StatelessWidget {
                                               overflow: TextOverflow.ellipsis,
                                               textAlign: TextAlign.left,
                                               style: TextThemeHelper
-                                                  .titleSmallOnPrimary)),
+                                                  .titleSmallGray900)),
                                       Spacer(),
                                       Container(
                                           margin: getMargin(top: 9, bottom: 9),
@@ -236,7 +234,7 @@ class InviteFriendsScreen extends StatelessWidget {
                                               child: Stack(children: [
                                                 CustomImageView(
                                                     svgPath: ImageConstant
-                                                        .imgCheckmarkWhiteA700,
+                                                        .imgCheckmarkPrimary,
                                                     height: getVerticalSize(13),
                                                     width:
                                                         getHorizontalSize(14),
@@ -260,7 +258,7 @@ class InviteFriendsScreen extends StatelessWidget {
                                               overflow: TextOverflow.ellipsis,
                                               textAlign: TextAlign.left,
                                               style: TextThemeHelper
-                                                  .titleSmallOnPrimary)),
+                                                  .titleSmallGray900)),
                                       Spacer(),
                                       Container(
                                           margin: getMargin(top: 9, bottom: 9),
@@ -281,7 +279,7 @@ class InviteFriendsScreen extends StatelessWidget {
                                               child: Stack(children: [
                                                 CustomImageView(
                                                     svgPath: ImageConstant
-                                                        .imgCheckmarkWhiteA700,
+                                                        .imgCheckmarkPrimary,
                                                     height: getVerticalSize(13),
                                                     width:
                                                         getHorizontalSize(14),

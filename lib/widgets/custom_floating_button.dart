@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pppv2/core/app_export.dart';
+import 'package:ppp/core/app_export.dart';
 
 class CustomFloatingButton extends StatelessWidget {
   CustomFloatingButton({
@@ -53,7 +53,7 @@ class CustomFloatingButton extends StatelessWidget {
             height: getSize(height ?? 0),
             decoration: decoration ??
                 BoxDecoration(
-                  color: appTheme.whiteA700,
+                  color: theme.colorScheme.primary,
                   borderRadius: BorderRadius.circular(
                     getHorizontalSize(
                       22.00,

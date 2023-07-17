@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pppv2/core/app_export.dart';
-import 'package:pppv2/widgets/custom_elevated_button.dart';
-import 'package:pppv2/widgets/custom_icon_button.dart';
+import 'package:ppp/core/app_export.dart';
+import 'package:ppp/widgets/custom_elevated_button.dart';
+import 'package:ppp/widgets/custom_icon_button.dart';
 
 class ChooseVehicleTypeScreen extends StatelessWidget {
   const ChooseVehicleTypeScreen({Key? key}) : super(key: key);
@@ -10,7 +10,7 @@ class ChooseVehicleTypeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            backgroundColor: appTheme.whiteA700,
+            backgroundColor: theme.colorScheme.primary,
             body: SizedBox(
                 width: double.maxFinite,
                 child: SingleChildScrollView(
@@ -70,7 +70,7 @@ class ChooseVehicleTypeScreen extends StatelessWidget {
                                                               bottom: 10)),
                                                       CustomImageView(
                                                           imagePath: ImageConstant
-                                                              .imgPathPrimary,
+                                                              .imgPathYellow600,
                                                           height:
                                                               getVerticalSize(
                                                                   252),
@@ -91,7 +91,7 @@ class ChooseVehicleTypeScreen extends StatelessWidget {
                           Align(
                               alignment: Alignment.bottomCenter,
                               child: Container(
-                                  decoration: AppDecoration.outline2.copyWith(
+                                  decoration: AppDecoration.outline3.copyWith(
                                       borderRadius:
                                           BorderRadiusStyle.customBorderTL16),
                                   child: Column(
@@ -142,7 +142,7 @@ class ChooseVehicleTypeScreen extends StatelessWidget {
                                                                         children: [
                                                                           Align(
                                                                               alignment: Alignment.centerRight,
-                                                                              child: SizedBox(width: getHorizontalSize(57), child: Divider(height: getVerticalSize(6), thickness: getVerticalSize(6), color: appTheme.gray500))),
+                                                                              child: SizedBox(width: getHorizontalSize(57), child: Divider(height: getVerticalSize(6), thickness: getVerticalSize(6), color: theme.colorScheme.errorContainer))),
                                                                           Padding(
                                                                               padding: getPadding(top: 14),
                                                                               child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -277,11 +277,7 @@ class ChooseVehicleTypeScreen extends StatelessWidget {
                                                       margin: getMargin(
                                                           left: 46,
                                                           top: 2,
-                                                          bottom: 1),
-                                                      onTap: () {
-                                                        onTapImgOthertwo(
-                                                            context);
-                                                      })
+                                                          bottom: 1))
                                                 ])),
                                         Padding(
                                             padding: getPadding(
@@ -300,7 +296,7 @@ class ChooseVehicleTypeScreen extends StatelessWidget {
                                                           textAlign:
                                                               TextAlign.left,
                                                           style: TextThemeHelper
-                                                              .bodyMediumErrorContainer)),
+                                                              .bodyMediumBluegray400)),
                                                   Padding(
                                                       padding:
                                                           getPadding(top: 1),
@@ -310,7 +306,7 @@ class ChooseVehicleTypeScreen extends StatelessWidget {
                                                           textAlign:
                                                               TextAlign.left,
                                                           style: TextThemeHelper
-                                                              .bodyMediumErrorContainer)),
+                                                              .bodyMediumBluegray400)),
                                                   Padding(
                                                       padding:
                                                           getPadding(top: 1),
@@ -320,7 +316,7 @@ class ChooseVehicleTypeScreen extends StatelessWidget {
                                                           textAlign:
                                                               TextAlign.left,
                                                           style: TextThemeHelper
-                                                              .bodyMediumErrorContainer))
+                                                              .bodyMediumBluegray400))
                                                 ])),
                                         CustomElevatedButton(
                                             text: "Valider",
@@ -330,7 +326,7 @@ class ChooseVehicleTypeScreen extends StatelessWidget {
                                                 right: 15,
                                                 bottom: 121),
                                             buttonStyle: ButtonThemeHelper
-                                                .fillPrimaryTL16
+                                                .fillYellow600TL16
                                                 .copyWith(
                                                     fixedSize:
                                                         MaterialStateProperty
@@ -340,7 +336,7 @@ class ChooseVehicleTypeScreen extends StatelessWidget {
                                                                 getVerticalSize(
                                                                     45)))),
                                             buttonTextStyle: TextThemeHelper
-                                                .titleMediumWhiteA700_1)
+                                                .titleMediumPrimary_1)
                                       ])))
                         ]))))));
   }
@@ -351,14 +347,5 @@ class ChooseVehicleTypeScreen extends StatelessWidget {
   /// to navigate back to the previous screen.
   onTapBtnArrowleft(BuildContext context) {
     Navigator.pop(context);
-  }
-
-  /// Navigates to the chooseVehicleTypeFullViewScreen when the action is triggered.
-  ///
-  /// The [BuildContext] parameter is used to build the navigation stack.
-  /// When the action is triggered, this function uses the `Navigator` widget
-  /// to push the named route for the chooseVehicleTypeFullViewScreen.
-  onTapImgOthertwo(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.chooseVehicleTypeFullViewScreen);
   }
 }

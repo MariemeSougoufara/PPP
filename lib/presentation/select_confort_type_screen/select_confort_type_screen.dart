@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pppv2/core/app_export.dart';
-import 'package:pppv2/widgets/custom_elevated_button.dart';
-import 'package:pppv2/widgets/custom_icon_button.dart';
+import 'package:ppp/core/app_export.dart';
+import 'package:ppp/widgets/custom_elevated_button.dart';
+import 'package:ppp/widgets/custom_icon_button.dart';
 
 class SelectConfortTypeScreen extends StatelessWidget {
   const SelectConfortTypeScreen({Key? key}) : super(key: key);
@@ -10,7 +10,7 @@ class SelectConfortTypeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            backgroundColor: appTheme.whiteA700,
+            backgroundColor: theme.colorScheme.primary,
             body: SizedBox(
                 width: double.maxFinite,
                 child: SingleChildScrollView(
@@ -68,7 +68,7 @@ class SelectConfortTypeScreen extends StatelessWidget {
                                                               bottom: 10)),
                                                       CustomImageView(
                                                           imagePath: ImageConstant
-                                                              .imgPathPrimary,
+                                                              .imgPathYellow600,
                                                           height:
                                                               getVerticalSize(
                                                                   252),
@@ -89,7 +89,7 @@ class SelectConfortTypeScreen extends StatelessWidget {
                           Align(
                               alignment: Alignment.bottomCenter,
                               child: Container(
-                                  decoration: AppDecoration.outline2.copyWith(
+                                  decoration: AppDecoration.outline3.copyWith(
                                       borderRadius:
                                           BorderRadiusStyle.customBorderTL16),
                                   child: Column(
@@ -138,8 +138,9 @@ class SelectConfortTypeScreen extends StatelessWidget {
                                                                         thickness:
                                                                             getVerticalSize(
                                                                                 6),
-                                                                        color: appTheme
-                                                                            .gray500)),
+                                                                        color: theme
+                                                                            .colorScheme
+                                                                            .errorContainer)),
                                                                 Padding(
                                                                     padding: getPadding(
                                                                         top: 11,
@@ -150,7 +151,7 @@ class SelectConfortTypeScreen extends StatelessWidget {
                                                                             MainAxisAlignment.center,
                                                                         children: [
                                                                           CustomImageView(
-                                                                              svgPath: ImageConstant.imgCarOnsecondarycontainer28x61,
+                                                                              svgPath: ImageConstant.imgCarOnprimary28x61,
                                                                               height: getVerticalSize(28),
                                                                               width: getHorizontalSize(61),
                                                                               radius: BorderRadius.only(topLeft: Radius.circular(getHorizontalSize(16)), topRight: Radius.circular(getHorizontalSize(16))),
@@ -205,10 +206,7 @@ class SelectConfortTypeScreen extends StatelessWidget {
                                                                   16)),
                                                           topRight: Radius.circular(
                                                               getHorizontalSize(
-                                                                  16))),
-                                                      onTap: () {
-                                                        onTapImgSignal(context);
-                                                      }),
+                                                                  16)))),
                                                   Padding(
                                                       padding:
                                                           getPadding(left: 44),
@@ -238,10 +236,7 @@ class SelectConfortTypeScreen extends StatelessWidget {
                                                               getHorizontalSize(
                                                                   16))),
                                                       margin:
-                                                          getMargin(left: 44),
-                                                      onTap: () {
-                                                        onTapImgMusic(context);
-                                                      }),
+                                                          getMargin(left: 44)),
                                                   Padding(
                                                       padding:
                                                           getPadding(left: 44),
@@ -292,7 +287,7 @@ class SelectConfortTypeScreen extends StatelessWidget {
                                                           textAlign:
                                                               TextAlign.left,
                                                           style: TextThemeHelper
-                                                              .bodyMediumErrorContainer)),
+                                                              .bodyMediumBluegray400)),
                                                   Padding(
                                                       padding:
                                                           getPadding(top: 1),
@@ -302,7 +297,7 @@ class SelectConfortTypeScreen extends StatelessWidget {
                                                           textAlign:
                                                               TextAlign.left,
                                                           style: TextThemeHelper
-                                                              .bodyMediumErrorContainer)),
+                                                              .bodyMediumBluegray400)),
                                                   Padding(
                                                       padding:
                                                           getPadding(top: 1),
@@ -312,7 +307,7 @@ class SelectConfortTypeScreen extends StatelessWidget {
                                                           textAlign:
                                                               TextAlign.left,
                                                           style: TextThemeHelper
-                                                              .bodyMediumErrorContainer))
+                                                              .bodyMediumBluegray400))
                                                 ])),
                                         CustomElevatedButton(
                                             text: "Valider",
@@ -322,21 +317,17 @@ class SelectConfortTypeScreen extends StatelessWidget {
                                                 right: 15,
                                                 bottom: 121),
                                             buttonStyle: ButtonThemeHelper
-                                                .fillPrimaryTL16
+                                                .fillYellow600TL16
                                                 .copyWith(
                                                     fixedSize:
-                                                        MaterialStateProperty.all<
-                                                                Size>(
-                                                            Size(
+                                                        MaterialStateProperty
+                                                            .all<Size>(Size(
                                                                 double
                                                                     .maxFinite,
                                                                 getVerticalSize(
                                                                     45)))),
                                             buttonTextStyle: TextThemeHelper
-                                                .titleMediumWhiteA700_1,
-                                            onTap: () {
-                                              onTapValider(context);
-                                            })
+                                                .titleMediumPrimary_1)
                                       ])))
                         ]))))));
   }
@@ -347,32 +338,5 @@ class SelectConfortTypeScreen extends StatelessWidget {
   /// to navigate back to the previous screen.
   onTapBtnArrowleft(BuildContext context) {
     Navigator.pop(context);
-  }
-
-  /// Navigates to the paymentMethodScreen when the action is triggered.
-  ///
-  /// The [BuildContext] parameter is used to build the navigation stack.
-  /// When the action is triggered, this function uses the `Navigator` widget
-  /// to push the named route for the paymentMethodScreen.
-  onTapImgSignal(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.paymentMethodScreen);
-  }
-
-  /// Navigates to the inputPromoCodeScreen when the action is triggered.
-  ///
-  /// The [BuildContext] parameter is used to build the navigation stack.
-  /// When the action is triggered, this function uses the `Navigator` widget
-  /// to push the named route for the inputPromoCodeScreen.
-  onTapImgMusic(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.inputPromoCodeScreen);
-  }
-
-  /// Navigates to the selectDriverScreen when the action is triggered.
-  ///
-  /// The [BuildContext] parameter is used to build the navigation stack.
-  /// When the action is triggered, this function uses the `Navigator` widget
-  /// to push the named route for the selectDriverScreen.
-  onTapValider(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.selectDriverScreen);
   }
 }

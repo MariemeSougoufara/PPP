@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pppv2/core/app_export.dart';
+import 'package:ppp/core/app_export.dart';
 
 class OnboardingOneScreen extends StatelessWidget {
   const OnboardingOneScreen({Key? key})
@@ -11,7 +11,7 @@ class OnboardingOneScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: appTheme.whiteA700,
+        backgroundColor: theme.colorScheme.primary,
         body: SizedBox(
           width: double.maxFinite,
           child: Column(
@@ -56,7 +56,7 @@ class OnboardingOneScreen extends StatelessWidget {
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.center,
-                  style: TextThemeHelper.bodyLargeOnPrimary,
+                  style: TextThemeHelper.bodyLargeGray900,
                 ),
               ),
               Spacer(),
@@ -89,7 +89,7 @@ class OnboardingOneScreen extends StatelessWidget {
                       value: 0.33,
                       backgroundColor: appTheme.blueGray5001,
                       valueColor: AlwaysStoppedAnimation<Color>(
-                        theme.colorScheme.primary,
+                        appTheme.yellow600,
                       ),
                     ),
                   ),

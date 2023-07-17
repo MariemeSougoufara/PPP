@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pppv2/core/app_export.dart';
-import 'package:pppv2/widgets/custom_elevated_button.dart';
-import 'package:pppv2/widgets/custom_icon_button.dart';
-import 'package:pppv2/widgets/custom_radio_button.dart';
+import 'package:ppp/core/app_export.dart';
+import 'package:ppp/widgets/custom_elevated_button.dart';
+import 'package:ppp/widgets/custom_icon_button.dart';
+import 'package:ppp/widgets/custom_radio_button.dart';
 
 // ignore_for_file: must_be_immutable
 class BookingDetailsScreen extends StatelessWidget {
@@ -16,12 +16,12 @@ class BookingDetailsScreen extends StatelessWidget {
         child: Scaffold(
             extendBody: true,
             extendBodyBehindAppBar: true,
-            backgroundColor: appTheme.whiteA700,
+            backgroundColor: theme.colorScheme.primary,
             body: Container(
                 width: size.width,
                 height: size.height,
                 decoration: BoxDecoration(
-                    color: appTheme.whiteA700,
+                    color: theme.colorScheme.primary,
                     image: DecorationImage(
                         image: AssetImage(ImageConstant.imgGroup66),
                         fit: BoxFit.cover)),
@@ -71,7 +71,7 @@ class BookingDetailsScreen extends StatelessWidget {
                                                           bottom: 10)),
                                                   CustomImageView(
                                                       imagePath: ImageConstant
-                                                          .imgPathPrimary,
+                                                          .imgPathYellow600,
                                                       height:
                                                           getVerticalSize(252),
                                                       width: getHorizontalSize(
@@ -90,7 +90,7 @@ class BookingDetailsScreen extends StatelessWidget {
                                   width: double.maxFinite,
                                   child: Container(
                                       margin: getMargin(top: 52, bottom: 5),
-                                      decoration: AppDecoration.outline7
+                                      decoration: AppDecoration.outline8
                                           .copyWith(
                                               borderRadius: BorderRadiusStyle
                                                   .roundedBorder8),
@@ -181,7 +181,7 @@ class BookingDetailsScreen extends StatelessWidget {
                                                                                 .fillIndigoA400TL20,
                                                                         child: CustomImageView(
                                                                             svgPath:
-                                                                                ImageConstant.imgLocationWhiteA700)),
+                                                                                ImageConstant.imgLocationPrimary)),
                                                                     CustomIconButton(
                                                                         height:
                                                                             40,
@@ -201,7 +201,7 @@ class BookingDetailsScreen extends StatelessWidget {
                                                                                 6),
                                                                         decoration:
                                                                             IconButtonStyleHelper
-                                                                                .fillPrimary,
+                                                                                .fillYellow600,
                                                                         child: CustomImageView(
                                                                             svgPath:
                                                                                 ImageConstant.imgReply))
@@ -421,7 +421,7 @@ class BookingDetailsScreen extends StatelessWidget {
                                                     right: 16,
                                                     bottom: 19),
                                                 buttonStyle: ButtonThemeHelper
-                                                    .fillOnSecondaryContainer
+                                                    .fillOnPrimary
                                                     .copyWith(
                                                         fixedSize: MaterialStateProperty
                                                             .all<Size>(Size(
@@ -430,10 +430,7 @@ class BookingDetailsScreen extends StatelessWidget {
                                                                 getVerticalSize(
                                                                     45)))),
                                                 buttonTextStyle: TextThemeHelper
-                                                    .titleMediumWhiteA700_1,
-                                                onTap: () {
-                                                  onTapAnnulerla(context);
-                                                })
+                                                    .titleMediumPrimary_1)
                                           ]))))
                         ])))));
   }
@@ -444,14 +441,5 @@ class BookingDetailsScreen extends StatelessWidget {
   /// to navigate back to the previous screen.
   onTapBtnClose(BuildContext context) {
     Navigator.pop(context);
-  }
-
-  /// Navigates to the homeScreen when the action is triggered.
-  ///
-  /// The [BuildContext] parameter is used to build the navigation stack.
-  /// When the action is triggered, this function uses the `Navigator` widget
-  /// to push the named route for the homeScreen.
-  onTapAnnulerla(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.homeScreen);
   }
 }

@@ -47,22 +47,8 @@ class ThemeHelper {
       colorScheme: colorScheme,
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          backgroundColor: colorScheme.primary,
+          backgroundColor: appTheme.yellow600,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(
-              8,
-            ),
-          ),
-        ),
-      ),
-      outlinedButtonTheme: OutlinedButtonThemeData(
-        style: OutlinedButton.styleFrom(
-          backgroundColor: Color(0XFFFFFFFF),
-          shape: RoundedRectangleBorder(
-            side: BorderSide(
-              color: colorScheme.primary,
-              width: 2,
-            ),
             borderRadius: BorderRadius.circular(
               8,
             ),
@@ -70,18 +56,18 @@ class ThemeHelper {
         ),
       ),
       radioTheme: RadioThemeData(
-        fillColor: MaterialStateProperty.all<Color>(colorScheme.primary),
+        fillColor: MaterialStateProperty.all<Color>(appTheme.yellow600),
         visualDensity: const VisualDensity(
           vertical: -4,
           horizontal: -4,
         ),
       ),
       floatingActionButtonTheme: FloatingActionButtonThemeData(
-        backgroundColor: appTheme.whiteA700,
+        backgroundColor: colorScheme.primary,
       ),
       textTheme: TextTheme(
         headlineLarge: TextStyle(
-          color: colorScheme.onPrimary,
+          color: appTheme.gray900,
           fontSize: getFontSize(
             30,
           ),
@@ -97,7 +83,7 @@ class ThemeHelper {
           fontWeight: FontWeight.w400,
         ),
         headlineMedium: TextStyle(
-          color: colorScheme.onSecondaryContainer,
+          color: colorScheme.onPrimary,
           fontSize: getFontSize(
             27,
           ),
@@ -105,7 +91,7 @@ class ThemeHelper {
           fontWeight: FontWeight.w700,
         ),
         titleMedium: TextStyle(
-          color: colorScheme.onSecondaryContainer,
+          color: colorScheme.onPrimary,
           fontSize: getFontSize(
             17,
           ),
@@ -113,7 +99,7 @@ class ThemeHelper {
           fontWeight: FontWeight.w600,
         ),
         bodyLarge: TextStyle(
-          color: colorScheme.onSecondaryContainer,
+          color: colorScheme.onPrimary,
           fontSize: getFontSize(
             17,
           ),
@@ -121,7 +107,7 @@ class ThemeHelper {
           fontWeight: FontWeight.w400,
         ),
         displayLarge: TextStyle(
-          color: appTheme.whiteA700,
+          color: colorScheme.primary,
           fontSize: getFontSize(
             60,
           ),
@@ -129,7 +115,7 @@ class ThemeHelper {
           fontWeight: FontWeight.w900,
         ),
         titleSmall: TextStyle(
-          color: colorScheme.onSecondaryContainer,
+          color: colorScheme.onPrimary,
           fontSize: getFontSize(
             15,
           ),
@@ -137,7 +123,7 @@ class ThemeHelper {
           fontWeight: FontWeight.w700,
         ),
         titleLarge: TextStyle(
-          color: colorScheme.onSecondaryContainer,
+          color: colorScheme.onPrimary,
           fontSize: getFontSize(
             20,
           ),
@@ -145,7 +131,7 @@ class ThemeHelper {
           fontWeight: FontWeight.w600,
         ),
         headlineSmall: TextStyle(
-          color: colorScheme.onPrimary,
+          color: appTheme.gray900,
           fontSize: getFontSize(
             24,
           ),
@@ -161,7 +147,7 @@ class ThemeHelper {
           fontWeight: FontWeight.w600,
         ),
         displaySmall: TextStyle(
-          color: appTheme.whiteA700,
+          color: colorScheme.primary,
           fontSize: getFontSize(
             34,
           ),
@@ -183,36 +169,36 @@ class ThemeHelper {
 /// Class containing the supported color schemes.
 class ColorSchemes {
   static final primaryColorScheme = ColorScheme.light(
-    onPrimary: Color(0XFF262628),
-    shadow: Color(0XFF262628),
+    onPrimary: Color(0XFF242E42),
+    shadow: Color(0XFF242E42),
     onPrimaryContainer: Color(0XFF030303),
     onTertiary: Color(0XFF030303),
     scrim: Color(0XFF4A494A),
     primaryContainer: Color(0XFF4A494A),
     tertiaryContainer: Color(0XB0F6F6F6),
     secondaryContainer: Color(0XB0F6F6F6),
-    error: Color(0XFF262628),
+    error: Color(0XFF242E42),
     onErrorContainer: Color(0X4C191919),
-    outline: Color(0XFF262628),
+    outline: Color(0XFF242E42),
     onSurfaceVariant: Color(0XFF242E42),
     onBackground: Color(0XFF030303),
     outlineVariant: Color(0XFF4A494A),
-    errorContainer: Color(0XFF8A8A8F),
+    errorContainer: Color(0XFF9B9A9B),
     onSurface: Color(0XFF030303),
-    onError: Color(0XFFD7D7D7),
+    onError: Color(0XD1F8F8F8),
     surface: Color(0XFF4A494A),
-    onInverseSurface: Color(0XFFD7D7D7),
+    onInverseSurface: Color(0XD1F8F8F8),
     onSecondaryContainer: Color(0XFF242E42),
     tertiary: Color(0XFF4A494A),
-    surfaceTint: Color(0XFF262628),
+    surfaceTint: Color(0XFF242E42),
     onTertiaryContainer: Color(0XFF242E42),
     surfaceVariant: Color(0XB0F6F6F6),
     inversePrimary: Color(0XFF4A494A),
     secondary: Color(0XFF4A494A),
-    inverseSurface: Color(0XFF262628),
+    inverseSurface: Color(0XFF242E42),
     background: Color(0XFF4A494A),
     onSecondary: Color(0XFF030303),
-    primary: Color(0XFFFDDA38),
+    primary: Color(0XFFFFFFFF),
   );
 }
 
@@ -223,22 +209,23 @@ class PrimaryColors {
   Color get gray400 => Color(0XFFC8C7CC);
   Color get amber300 => Color(0XFFFFC850);
   Color get gray300 => Color(0XFFDAD9E2);
-  Color get gray500 => Color(0XFF9B9A9B);
   Color get greenA200 => Color(0XFF4CE5B1);
   Color get yellowA700 => Color(0XFFFFD300);
   Color get indigo900 => Color(0XFF113984);
   Color get pink500 => Color(0XFFF52C55);
+  Color get blueGray100 => Color(0XFFD7D7D7);
+  Color get gray900 => Color(0XFF262628);
   Color get blueGray50 => Color(0XFFF1F1F1);
   Color get gray200 => Color(0XFFEEEEEE);
   Color get indigoA400 => Color(0XFF4252FF);
   Color get gray50 => Color(0XFFFCFCFC);
   Color get blueGray5001 => Color(0XFFEFEFF4);
-  Color get gray5001 => Color(0XFFF8F8F8);
-  Color get whiteA700 => Color(0XFFFFFFFF);
   Color get amberA400 => Color(0XFFFFCC00);
+  Color get blueGray400 => Color(0XFF8A8A8F);
   Color get gray30001 => Color(0XFFE1E0E8);
   Color get gray40001 => Color(0XFFC1C0C8);
-  Color get blueGray400 => Color(0XFF888888);
+  Color get yellow600 => Color(0XFFFDDA38);
+  Color get blueGray40001 => Color(0XFF888888);
   Color get blueGray5002 => Color(0XFFEEEEF1);
   Color get black900 => Color(0XFF000000);
   Color get blue700 => Color(0XFF2672CB);

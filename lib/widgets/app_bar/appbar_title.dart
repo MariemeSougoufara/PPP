@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pppv2/core/app_export.dart';
+import 'package:ppp/core/app_export.dart';
 
 // ignore: must_be_immutable
 class AppbarTitle extends StatelessWidget {
@@ -30,11 +30,11 @@ class AppbarTitle extends StatelessWidget {
           text,
           overflow: TextOverflow.ellipsis,
           textAlign: TextAlign.left,
-          style: TextThemeHelper.titleMediumWhiteA700.copyWith(
+          style: TextThemeHelper.titleMediumPrimary.copyWith(
             letterSpacing: getHorizontalSize(
               0.46,
             ),
-            color: appTheme.whiteA700,
+            color: theme.colorScheme.primary,
           ),
         ),
       ),

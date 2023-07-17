@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart' as fs;
-import 'package:pppv2/core/app_export.dart';
-import 'package:pppv2/widgets/custom_text_form_field.dart';
+import 'package:ppp/core/app_export.dart';
+import 'package:ppp/widgets/custom_text_form_field.dart';
 
 // ignore_for_file: must_be_immutable
 class MessageScreen extends StatelessWidget {
@@ -13,7 +13,7 @@ class MessageScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            backgroundColor: appTheme.gray5001.withOpacity(0.82),
+            backgroundColor: theme.colorScheme.onError,
             resizeToAvoidBottomInset: false,
             body: SizedBox(
                 width: double.maxFinite,
@@ -109,7 +109,7 @@ class MessageScreen extends StatelessWidget {
                           child: Text("Aujourd'hui à 17h03",
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
-                              style: TextThemeHelper.bodyMediumGray500)),
+                              style: TextThemeHelper.bodyMediumErrorContainer)),
                       Align(
                           alignment: Alignment.centerRight,
                           child: Container(
@@ -125,8 +125,8 @@ class MessageScreen extends StatelessWidget {
                                   child: Text("Salut, où êtes vous?",
                                       overflow: TextOverflow.ellipsis,
                                       textAlign: TextAlign.left,
-                                      style: TextThemeHelper
-                                          .bodyLargeWhiteA700)))),
+                                      style:
+                                          TextThemeHelper.bodyLargePrimary)))),
                       Container(
                           height: getVerticalSize(146),
                           width: getHorizontalSize(343),
@@ -156,7 +156,7 @@ class MessageScreen extends StatelessWidget {
                                                 overflow: TextOverflow.ellipsis,
                                                 textAlign: TextAlign.left,
                                                 style: TextThemeHelper
-                                                    .bodyLargeOnPrimary)))),
+                                                    .bodyLargeGray900)))),
                                 Align(
                                     alignment: Alignment.bottomRight,
                                     child: Container(
@@ -177,14 +177,14 @@ class MessageScreen extends StatelessWidget {
                                                 overflow: TextOverflow.ellipsis,
                                                 textAlign: TextAlign.left,
                                                 style: TextThemeHelper
-                                                    .bodyLargeWhiteA700))))
+                                                    .bodyLargePrimary))))
                               ])),
                       Padding(
                           padding: getPadding(top: 17),
                           child: Text("17H33 ",
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
-                              style: TextThemeHelper.bodyMediumGray500)),
+                              style: TextThemeHelper.bodyMediumErrorContainer)),
                       Align(
                           alignment: Alignment.centerLeft,
                           child: Container(
@@ -205,7 +205,7 @@ class MessageScreen extends StatelessWidget {
                                       overflow: TextOverflow.ellipsis,
                                       textAlign: TextAlign.left,
                                       style:
-                                          TextThemeHelper.bodyLargeOnPrimary))))
+                                          TextThemeHelper.bodyLargeGray900))))
                     ])),
             bottomNavigationBar: Container(
                 margin: getMargin(bottom: 36),
@@ -237,8 +237,8 @@ class MessageScreen extends StatelessWidget {
                                         hintText: "Tapez un message...",
                                         hintStyle: theme.textTheme.bodyMedium!,
                                         filled: true,
-                                        fillColor:
-                                            appTheme.whiteA700.withOpacity(0.8),
+                                        fillColor: theme.colorScheme.primary
+                                            .withOpacity(0.8),
                                         defaultBorderDecoration:
                                             TextFormFieldStyleHelper
                                                 .outlineBluegray5001TL8,

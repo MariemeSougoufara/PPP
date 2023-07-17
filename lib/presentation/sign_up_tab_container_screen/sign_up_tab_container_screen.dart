@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pppv2/core/app_export.dart';
-import 'package:pppv2/presentation/sign_up_page/sign_up_page.dart';
+import 'package:ppp/core/app_export.dart';
+import 'package:ppp/presentation/sign_up_page/sign_up_page.dart';
 
 class SignUpTabContainerScreen extends StatefulWidget {
   const SignUpTabContainerScreen({Key? key})
@@ -27,7 +27,7 @@ class SignUpTabContainerScreenState extends State<SignUpTabContainerScreen>
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: appTheme.whiteA700,
+        backgroundColor: theme.colorScheme.primary,
         body: SizedBox(
           height: size.height,
           width: double.maxFinite,
@@ -48,7 +48,7 @@ class SignUpTabContainerScreenState extends State<SignUpTabContainerScreen>
                         ),
                         width: double.maxFinite,
                         decoration: BoxDecoration(
-                          color: theme.colorScheme.primary,
+                          color: appTheme.yellow600,
                         ),
                       ),
                       Spacer(),
@@ -57,9 +57,9 @@ class SignUpTabContainerScreenState extends State<SignUpTabContainerScreen>
                           305,
                         ),
                         margin: getMargin(
-                          left: 37,
-                          right: 32,
-                          bottom: 43,
+                          left: 33,
+                          right: 36,
+                          bottom: 23,
                         ),
                         child: Text(
                           "En cliquant sur \"s’inscrire\", vous acceptez nos conditions générales d'utilisation.",
@@ -74,7 +74,7 @@ class SignUpTabContainerScreenState extends State<SignUpTabContainerScreen>
                 ),
               ),
               CustomImageView(
-                imagePath: ImageConstant.imgGroup2WhiteA700,
+                imagePath: ImageConstant.imgGroup2Primary,
                 height: getVerticalSize(
                   256,
                 ),
@@ -114,7 +114,7 @@ class SignUpTabContainerScreenState extends State<SignUpTabContainerScreen>
                             margin: getMargin(
                               top: 94,
                             ),
-                            decoration: AppDecoration.outline.copyWith(
+                            decoration: AppDecoration.outline1.copyWith(
                               borderRadius: BorderRadiusStyle.roundedBorder8,
                             ),
                             child: Column(
@@ -130,11 +130,11 @@ class SignUpTabContainerScreenState extends State<SignUpTabContainerScreen>
                                   ),
                                   child: TabBar(
                                     controller: tabviewController,
-                                    labelColor: theme.colorScheme.onPrimary,
+                                    labelColor: appTheme.gray900,
                                     labelStyle: TextStyle(),
                                     unselectedLabelColor: appTheme.gray400,
                                     unselectedLabelStyle: TextStyle(),
-                                    indicatorColor: theme.colorScheme.primary,
+                                    indicatorColor: appTheme.yellow600,
                                     tabs: [
                                       Tab(
                                         child: Text(

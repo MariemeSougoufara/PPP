@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pppv2/core/app_export.dart';
-import 'package:pppv2/widgets/custom_elevated_button.dart';
-import 'package:pppv2/widgets/custom_icon_button.dart';
+import 'package:ppp/core/app_export.dart';
+import 'package:ppp/widgets/custom_icon_button.dart';
 
 class InputPromoCodeScreen extends StatelessWidget {
   const InputPromoCodeScreen({Key? key}) : super(key: key);
@@ -10,7 +9,7 @@ class InputPromoCodeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            backgroundColor: appTheme.whiteA700,
+            backgroundColor: theme.colorScheme.primary,
             body: SizedBox(
                 width: double.maxFinite,
                 child: SingleChildScrollView(
@@ -46,7 +45,7 @@ class InputPromoCodeScreen extends StatelessWidget {
                                                     .imgArrowleftGray400)),
                                         CustomImageView(
                                             imagePath:
-                                                ImageConstant.imgPathPrimary,
+                                                ImageConstant.imgPathYellow600,
                                             height: getVerticalSize(252),
                                             width: getHorizontalSize(124),
                                             alignment: Alignment.topRight,
@@ -68,7 +67,7 @@ class InputPromoCodeScreen extends StatelessWidget {
                           Align(
                               alignment: Alignment.bottomCenter,
                               child: Container(
-                                  decoration: AppDecoration.outline5.copyWith(
+                                  decoration: AppDecoration.outline6.copyWith(
                                       borderRadius:
                                           BorderRadiusStyle.customBorderTL16),
                                   child: Column(
@@ -143,7 +142,7 @@ class InputPromoCodeScreen extends StatelessWidget {
                                                           right: 14,
                                                           bottom: 7),
                                                       decoration: AppDecoration
-                                                          .outline6
+                                                          .outline7
                                                           .copyWith(
                                                               borderRadius:
                                                                   BorderRadiusStyle
@@ -151,7 +150,7 @@ class InputPromoCodeScreen extends StatelessWidget {
                                                       child: Row(children: [
                                                         CustomImageView(
                                                             svgPath: ImageConstant
-                                                                .imgVolumePrimary,
+                                                                .imgVolumeYellow600,
                                                             height: getSize(30),
                                                             width: getSize(30),
                                                             radius: BorderRadius.only(
@@ -182,25 +181,32 @@ class InputPromoCodeScreen extends StatelessWidget {
                                                                     .textTheme
                                                                     .bodyMedium))
                                                       ])),
-                                                  CustomElevatedButton(
-                                                      text: "Appliquer",
+                                                  Container(
                                                       margin:
                                                           getMargin(top: 41),
-                                                      buttonStyle: ButtonThemeHelper
-                                                          .fillPrimaryTL16
+                                                      padding: getPadding(
+                                                          left: 136,
+                                                          top: 8,
+                                                          right: 136,
+                                                          bottom: 8),
+                                                      decoration: AppDecoration
+                                                          .fill
                                                           .copyWith(
-                                                              fixedSize: MaterialStateProperty
-                                                                  .all<Size>(Size(
-                                                                      double
-                                                                          .maxFinite,
-                                                                      getVerticalSize(
-                                                                          45)))),
-                                                      buttonTextStyle:
-                                                          TextThemeHelper
-                                                              .titleMediumWhiteA700_1,
-                                                      onTap: () {
-                                                        onTapAppliquer(context);
-                                                      })
+                                                              borderRadius:
+                                                                  BorderRadiusStyle
+                                                                      .customBorderTL16),
+                                                      child: Padding(
+                                                          padding: getPadding(
+                                                              top: 6),
+                                                          child: Text("Appliquer",
+                                                              overflow:
+                                                                  TextOverflow
+                                                                      .ellipsis,
+                                                              textAlign:
+                                                                  TextAlign
+                                                                      .left,
+                                                              style: TextThemeHelper
+                                                                  .titleMediumPrimary_1)))
                                                 ]))
                                       ])))
                         ]))))));
@@ -212,14 +218,5 @@ class InputPromoCodeScreen extends StatelessWidget {
   /// to navigate back to the previous screen.
   onTapBtnArrowleft(BuildContext context) {
     Navigator.pop(context);
-  }
-
-  /// Navigates to the selectDriverScreen when the action is triggered.
-  ///
-  /// The [BuildContext] parameter is used to build the navigation stack.
-  /// When the action is triggered, this function uses the `Navigator` widget
-  /// to push the named route for the selectDriverScreen.
-  onTapAppliquer(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.selectDriverScreen);
   }
 }

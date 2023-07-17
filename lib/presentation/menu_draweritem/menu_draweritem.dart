@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart' as fs;
-import 'package:pppv2/core/app_export.dart';
-import 'package:pppv2/widgets/custom_text_form_field.dart';
+import 'package:ppp/core/app_export.dart';
+import 'package:ppp/widgets/custom_text_form_field.dart';
 
 // ignore_for_file: must_be_immutable
 class MenuDraweritem extends StatelessWidget {
@@ -19,7 +19,7 @@ class MenuDraweritem extends StatelessWidget {
         width: getHorizontalSize(
           300,
         ),
-        decoration: AppDecoration.outline8,
+        decoration: AppDecoration.outline9,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -50,7 +50,7 @@ class MenuDraweritem extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     CustomImageView(
-                      imagePath: ImageConstant.imgAvatar78x88,
+                      imagePath: ImageConstant.imgAvatar,
                       height: getVerticalSize(
                         91,
                       ),
@@ -74,7 +74,7 @@ class MenuDraweritem extends StatelessWidget {
                         "Abdou Diagne",
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
-                        style: TextThemeHelper.titleLargeWhiteA700,
+                        style: TextThemeHelper.titleLargePrimary,
                       ),
                     ),
                     CustomTextFormField(
@@ -95,7 +95,7 @@ class MenuDraweritem extends StatelessWidget {
                           bottom: 4,
                         ),
                         decoration: BoxDecoration(
-                          color: appTheme.whiteA700,
+                          color: theme.colorScheme.primary,
                           borderRadius: BorderRadius.circular(
                             getHorizontalSize(
                               12,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pppv2/core/app_export.dart';
+import 'package:ppp/core/app_export.dart';
 
 // ignore: must_be_immutable
 class InviteFriendsItemWidget extends StatelessWidget {
@@ -37,7 +37,7 @@ class InviteFriendsItemWidget extends StatelessWidget {
             "",
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.left,
-            style: TextThemeHelper.titleSmallOnPrimary,
+            style: TextThemeHelper.titleSmallGray900,
           ),
         ),
         Spacer(),
@@ -63,7 +63,7 @@ class InviteFriendsItemWidget extends StatelessWidget {
               16,
             ),
             decoration: BoxDecoration(
-              color: theme.colorScheme.onPrimary,
+              color: appTheme.gray900,
             ),
           ),
         ),

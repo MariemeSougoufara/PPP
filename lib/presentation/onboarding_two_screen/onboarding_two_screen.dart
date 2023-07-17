@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart' as fs;
-import 'package:pppv2/core/app_export.dart';
+import 'package:ppp/core/app_export.dart';
 
 class OnboardingTwoScreen extends StatelessWidget {
   const OnboardingTwoScreen({Key? key})
@@ -12,7 +12,7 @@ class OnboardingTwoScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: appTheme.whiteA700,
+        backgroundColor: theme.colorScheme.primary,
         body: Container(
           width: double.maxFinite,
           padding: getPadding(
@@ -72,7 +72,7 @@ class OnboardingTwoScreen extends StatelessWidget {
                             TextSpan(
                               text: "Con",
                               style: TextStyle(
-                                color: appTheme.whiteA700,
+                                color: theme.colorScheme.primary,
                                 fontSize: getFontSize(
                                   7.1057000160217285,
                                 ),
@@ -83,7 +83,7 @@ class OnboardingTwoScreen extends StatelessWidget {
                             TextSpan(
                               text: "f",
                               style: TextStyle(
-                                color: appTheme.whiteA700,
+                                color: theme.colorScheme.primary,
                                 fontSize: getFontSize(
                                   7.1057000160217285,
                                 ),
@@ -94,7 +94,7 @@ class OnboardingTwoScreen extends StatelessWidget {
                             TextSpan(
                               text: "irm",
                               style: TextStyle(
-                                color: appTheme.whiteA700,
+                                color: theme.colorScheme.primary,
                                 fontSize: getFontSize(
                                   7.1057000160217285,
                                 ),
@@ -140,7 +140,7 @@ class OnboardingTwoScreen extends StatelessWidget {
                   maxLines: 3,
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.center,
-                  style: TextThemeHelper.bodyLargeOnPrimary,
+                  style: TextThemeHelper.bodyLargeGray900,
                 ),
               ),
             ],
@@ -188,7 +188,7 @@ class OnboardingTwoScreen extends StatelessWidget {
                     30,
                   ),
                   decoration: BoxDecoration(
-                    color: theme.colorScheme.primary,
+                    color: appTheme.yellow600,
                     borderRadius: BorderRadius.circular(
                       getHorizontalSize(
                         3,

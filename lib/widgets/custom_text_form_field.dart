@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pppv2/core/app_export.dart';
+import 'package:ppp/core/app_export.dart';
 
 class CustomTextFormField extends StatelessWidget {
   CustomTextFormField({
@@ -206,20 +206,20 @@ extension TextFormFieldStyleHelper on CustomTextFormField {
           width: 1,
         ),
       );
-  static OutlineInputBorder get fillWhiteA700 => OutlineInputBorder(
+  static OutlineInputBorder get fillPrimary => OutlineInputBorder(
         borderSide: BorderSide.none,
       );
-  static OutlineInputBorder get fillWhiteA7001 => OutlineInputBorder(
+  static OutlineInputBorder get fillPrimary1 => OutlineInputBorder(
         borderSide: BorderSide.none,
       );
-  static OutlineInputBorder get outlinePrimary => OutlineInputBorder(
+  static OutlineInputBorder get outlineYellow600 => OutlineInputBorder(
         borderRadius: BorderRadius.circular(
           getHorizontalSize(
             4.00,
           ),
         ),
         borderSide: BorderSide(
-          color: theme.colorScheme.primary,
+          color: appTheme.yellow600,
           width: 1,
         ),
       );

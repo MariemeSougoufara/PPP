@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pppv2/core/app_export.dart';
-import 'package:pppv2/presentation/my_account_select_birthday_bottomsheet/my_account_select_birthday_bottomsheet.dart';
+import 'package:ppp/core/app_export.dart';
+import 'package:ppp/presentation/my_account_select_birthday_bottomsheet/my_account_select_birthday_bottomsheet.dart';
 
 class AppNavigationScreen extends StatelessWidget {
   const AppNavigationScreen({Key? key}) : super(key: key);
@@ -9,7 +9,7 @@ class AppNavigationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            backgroundColor: appTheme.whiteA700,
+            backgroundColor: theme.colorScheme.primary,
             body: SizedBox(
                 width: double.maxFinite,
                 child: Column(
@@ -45,7 +45,7 @@ class AppNavigationScreen extends StatelessWidget {
                                             overflow: TextOverflow.ellipsis,
                                             textAlign: TextAlign.center,
                                             style: TextStyle(
-                                                color: appTheme.blueGray400,
+                                                color: appTheme.blueGray40001,
                                                 fontSize: getFontSize(16),
                                                 fontFamily: 'Roboto',
                                                 fontWeight: FontWeight.w400)))),
@@ -115,7 +115,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                   getVerticalSize(
                                                                       1),
                                                               color: appTheme
-                                                                  .blueGray400))
+                                                                  .blueGray40001))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
@@ -168,7 +168,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                   getVerticalSize(
                                                                       1),
                                                               color: appTheme
-                                                                  .blueGray400))
+                                                                  .blueGray40001))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
@@ -221,7 +221,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                   getVerticalSize(
                                                                       1),
                                                               color: appTheme
-                                                                  .blueGray400))
+                                                                  .blueGray40001))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
@@ -274,7 +274,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                   getVerticalSize(
                                                                       1),
                                                               color: appTheme
-                                                                  .blueGray400))
+                                                                  .blueGray40001))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
@@ -327,7 +327,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                   getVerticalSize(
                                                                       1),
                                                               color: appTheme
-                                                                  .blueGray400))
+                                                                  .blueGray40001))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
@@ -380,7 +380,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                   getVerticalSize(
                                                                       1),
                                                               color: appTheme
-                                                                  .blueGray400))
+                                                                  .blueGray40001))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
@@ -433,7 +433,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                   getVerticalSize(
                                                                       1),
                                                               color: appTheme
-                                                                  .blueGray400))
+                                                                  .blueGray40001))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
@@ -486,7 +486,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                   getVerticalSize(
                                                                       1),
                                                               color: appTheme
-                                                                  .blueGray400))
+                                                                  .blueGray40001))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
@@ -539,7 +539,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                   getVerticalSize(
                                                                       1),
                                                               color: appTheme
-                                                                  .blueGray400))
+                                                                  .blueGray40001))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
@@ -592,7 +592,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                   getVerticalSize(
                                                                       1),
                                                               color: appTheme
-                                                                  .blueGray400))
+                                                                  .blueGray40001))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
@@ -646,7 +646,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                   getVerticalSize(
                                                                       1),
                                                               color: appTheme
-                                                                  .blueGray400))
+                                                                  .blueGray40001))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
@@ -699,7 +699,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                   getVerticalSize(
                                                                       1),
                                                               color: appTheme
-                                                                  .blueGray400))
+                                                                  .blueGray40001))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
@@ -753,7 +753,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                   getVerticalSize(
                                                                       1),
                                                               color: appTheme
-                                                                  .blueGray400))
+                                                                  .blueGray40001))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
@@ -806,7 +806,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                   getVerticalSize(
                                                                       1),
                                                               color: appTheme
-                                                                  .blueGray400))
+                                                                  .blueGray40001))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
@@ -859,7 +859,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                   getVerticalSize(
                                                                       1),
                                                               color: appTheme
-                                                                  .blueGray400))
+                                                                  .blueGray40001))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
@@ -912,7 +912,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                   getVerticalSize(
                                                                       1),
                                                               color: appTheme
-                                                                  .blueGray400))
+                                                                  .blueGray40001))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
@@ -965,7 +965,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                   getVerticalSize(
                                                                       1),
                                                               color: appTheme
-                                                                  .blueGray400))
+                                                                  .blueGray40001))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
@@ -1018,7 +1018,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                   getVerticalSize(
                                                                       1),
                                                               color: appTheme
-                                                                  .blueGray400))
+                                                                  .blueGray40001))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
@@ -1071,7 +1071,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                   getVerticalSize(
                                                                       1),
                                                               color: appTheme
-                                                                  .blueGray400))
+                                                                  .blueGray40001))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
@@ -1124,7 +1124,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                   getVerticalSize(
                                                                       1),
                                                               color: appTheme
-                                                                  .blueGray400))
+                                                                  .blueGray40001))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
@@ -1177,7 +1177,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                   getVerticalSize(
                                                                       1),
                                                               color: appTheme
-                                                                  .blueGray400))
+                                                                  .blueGray40001))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
@@ -1230,7 +1230,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                   getVerticalSize(
                                                                       1),
                                                               color: appTheme
-                                                                  .blueGray400))
+                                                                  .blueGray40001))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
@@ -1283,7 +1283,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                   getVerticalSize(
                                                                       1),
                                                               color: appTheme
-                                                                  .blueGray400))
+                                                                  .blueGray40001))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
@@ -1336,7 +1336,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                   getVerticalSize(
                                                                       1),
                                                               color: appTheme
-                                                                  .blueGray400))
+                                                                  .blueGray40001))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
@@ -1389,7 +1389,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                   getVerticalSize(
                                                                       1),
                                                               color: appTheme
-                                                                  .blueGray400))
+                                                                  .blueGray40001))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
@@ -1441,7 +1441,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                   getVerticalSize(
                                                                       1),
                                                               color: appTheme
-                                                                  .blueGray400))
+                                                                  .blueGray40001))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
@@ -1494,7 +1494,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                   getVerticalSize(
                                                                       1),
                                                               color: appTheme
-                                                                  .blueGray400))
+                                                                  .blueGray40001))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
@@ -1548,7 +1548,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                   getVerticalSize(
                                                                       1),
                                                               color: appTheme
-                                                                  .blueGray400))
+                                                                  .blueGray40001))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
@@ -1601,7 +1601,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                   getVerticalSize(
                                                                       1),
                                                               color: appTheme
-                                                                  .blueGray400))
+                                                                  .blueGray40001))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
@@ -1654,7 +1654,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                   getVerticalSize(
                                                                       1),
                                                               color: appTheme
-                                                                  .blueGray400))
+                                                                  .blueGray40001))
                                                     ])))
                                       ]))))
                     ]))));

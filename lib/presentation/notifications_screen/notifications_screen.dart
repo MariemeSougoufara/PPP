@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pppv2/core/app_export.dart';
-import 'package:pppv2/widgets/custom_icon_button.dart';
+import 'package:ppp/core/app_export.dart';
+import 'package:ppp/widgets/custom_icon_button.dart';
 
 class NotificationsScreen extends StatelessWidget {
   const NotificationsScreen({Key? key}) : super(key: key);
@@ -9,7 +9,7 @@ class NotificationsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            backgroundColor: appTheme.whiteA700,
+            backgroundColor: theme.colorScheme.primary,
             body: SizedBox(
                 height: size.height,
                 width: double.maxFinite,
@@ -167,7 +167,7 @@ class NotificationsScreen extends StatelessWidget {
                                                   .fillBluegray50,
                                               child: CustomImageView(
                                                   svgPath: ImageConstant
-                                                      .imgVolumePrimary)),
+                                                      .imgVolumeYellow600)),
                                           Padding(
                                               padding: getPadding(
                                                   left: 20,
@@ -247,7 +247,7 @@ class NotificationsScreen extends StatelessWidget {
                                                   .fillBluegray50,
                                               child: CustomImageView(
                                                   svgPath: ImageConstant
-                                                      .imgVolumePrimary)),
+                                                      .imgVolumeYellow600)),
                                           Padding(
                                               padding: getPadding(
                                                   left: 20,
@@ -479,7 +479,7 @@ class NotificationsScreen extends StatelessWidget {
                                                   .fillBluegray50,
                                               child: CustomImageView(
                                                   svgPath: ImageConstant
-                                                      .imgVolumePrimary)),
+                                                      .imgVolumeYellow600)),
                                           Padding(
                                               padding: getPadding(
                                                   left: 20,

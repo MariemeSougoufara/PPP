@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pppv2/core/app_export.dart';
-import 'package:pppv2/widgets/custom_elevated_button.dart';
-import 'package:pppv2/widgets/custom_icon_button.dart';
+import 'package:ppp/core/app_export.dart';
+import 'package:ppp/widgets/custom_elevated_button.dart';
+import 'package:ppp/widgets/custom_icon_button.dart';
 
 class SelectDriverScreen extends StatelessWidget {
   const SelectDriverScreen({Key? key}) : super(key: key);
@@ -12,12 +12,12 @@ class SelectDriverScreen extends StatelessWidget {
         child: Scaffold(
             extendBody: true,
             extendBodyBehindAppBar: true,
-            backgroundColor: appTheme.whiteA700,
+            backgroundColor: theme.colorScheme.primary,
             body: Container(
                 width: size.width,
                 height: size.height,
                 decoration: BoxDecoration(
-                    color: appTheme.whiteA700,
+                    color: theme.colorScheme.primary,
                     image: DecorationImage(
                         image: AssetImage(ImageConstant.imgGroup66),
                         fit: BoxFit.cover)),
@@ -67,7 +67,7 @@ class SelectDriverScreen extends StatelessWidget {
                                                           bottom: 10)),
                                                   CustomImageView(
                                                       imagePath: ImageConstant
-                                                          .imgPathPrimary,
+                                                          .imgPathYellow600,
                                                       height:
                                                           getVerticalSize(252),
                                                       width: getHorizontalSize(
@@ -94,7 +94,7 @@ class SelectDriverScreen extends StatelessWidget {
                                             height: getVerticalSize(271),
                                             width: getHorizontalSize(279),
                                             decoration: BoxDecoration(
-                                                color: appTheme.whiteA700
+                                                color: theme.colorScheme.primary
                                                     .withOpacity(0.69),
                                                 borderRadius:
                                                     BorderRadius.circular(
@@ -116,7 +116,7 @@ class SelectDriverScreen extends StatelessWidget {
                                             width: getHorizontalSize(311),
                                             margin: getMargin(top: 16),
                                             decoration: BoxDecoration(
-                                                color: appTheme.whiteA700
+                                                color: theme.colorScheme.primary
                                                     .withOpacity(0.69),
                                                 borderRadius:
                                                     BorderRadius.circular(
@@ -134,7 +134,7 @@ class SelectDriverScreen extends StatelessWidget {
                                     Align(
                                         alignment: Alignment.bottomCenter,
                                         child: Container(
-                                            decoration: AppDecoration.outline7
+                                            decoration: AppDecoration.outline8
                                                 .copyWith(
                                                     borderRadius:
                                                         BorderRadiusStyle
@@ -189,8 +189,8 @@ class SelectDriverScreen extends StatelessWidget {
                                                                                     Align(alignment: Alignment.bottomLeft, child: Padding(padding: getPadding(left: 23), child: Text("4.9", overflow: TextOverflow.ellipsis, textAlign: TextAlign.left, style: theme.textTheme.bodyMedium)))
                                                                                   ])),
                                                                               Spacer(),
-                                                                              CustomIconButton(height: 40, width: 40, margin: getMargin(top: 5, bottom: 5), padding: getPadding(all: 6), decoration: IconButtonStyleHelper.fillIndigoA400TL20, child: CustomImageView(svgPath: ImageConstant.imgLocationWhiteA700)),
-                                                                              CustomIconButton(height: 40, width: 40, margin: getMargin(left: 16, top: 5, right: 1, bottom: 5), padding: getPadding(all: 6), decoration: IconButtonStyleHelper.fillPrimary, child: CustomImageView(svgPath: ImageConstant.imgReply))
+                                                                              CustomIconButton(height: 40, width: 40, margin: getMargin(top: 5, bottom: 5), padding: getPadding(all: 6), decoration: IconButtonStyleHelper.fillIndigoA400TL20, child: CustomImageView(svgPath: ImageConstant.imgLocationPrimary)),
+                                                                              CustomIconButton(height: 40, width: 40, margin: getMargin(left: 16, top: 5, right: 1, bottom: 5), padding: getPadding(all: 6), decoration: IconButtonStyleHelper.fillYellow600, child: CustomImageView(svgPath: ImageConstant.imgReply))
                                                                             ]))),
                                                             Align(
                                                                 alignment: Alignment
@@ -278,7 +278,7 @@ class SelectDriverScreen extends StatelessWidget {
                                                                         TextAlign
                                                                             .left,
                                                                     style: TextThemeHelper
-                                                                        .bodyMediumOnSecondaryContainer))
+                                                                        .bodyMediumOnPrimary))
                                                           ]))),
                                                   Padding(
                                                       padding:
@@ -308,7 +308,7 @@ class SelectDriverScreen extends StatelessWidget {
                                                             CustomImageView(
                                                                 svgPath:
                                                                     ImageConstant
-                                                                        .imgCarOnsecondarycontainer28x61,
+                                                                        .imgCarOnprimary28x61,
                                                                 height:
                                                                     getVerticalSize(
                                                                         28),
@@ -378,7 +378,7 @@ class SelectDriverScreen extends StatelessWidget {
                                                           right: 16,
                                                           bottom: 19),
                                                       buttonStyle: ButtonThemeHelper
-                                                          .fillPrimary
+                                                          .fillYellow600
                                                           .copyWith(
                                                               fixedSize: MaterialStateProperty
                                                                   .all<Size>(Size(
@@ -388,10 +388,7 @@ class SelectDriverScreen extends StatelessWidget {
                                                                           45)))),
                                                       buttonTextStyle:
                                                           TextThemeHelper
-                                                              .titleMediumWhiteA700_1,
-                                                      onTap: () {
-                                                        onTapConfirmer(context);
-                                                      })
+                                                              .titleMediumPrimary_1)
                                                 ])))
                                   ]))
                         ])))));
@@ -403,14 +400,5 @@ class SelectDriverScreen extends StatelessWidget {
   /// to navigate back to the previous screen.
   onTapBtnArrowleft(BuildContext context) {
     Navigator.pop(context);
-  }
-
-  /// Navigates to the bookingSuccessfullyScreen when the action is triggered.
-  ///
-  /// The [BuildContext] parameter is used to build the navigation stack.
-  /// When the action is triggered, this function uses the `Navigator` widget
-  /// to push the named route for the bookingSuccessfullyScreen.
-  onTapConfirmer(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.bookingSuccessfullyScreen);
   }
 }

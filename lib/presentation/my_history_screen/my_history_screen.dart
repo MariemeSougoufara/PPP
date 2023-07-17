@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pppv2/core/app_export.dart';
-import 'package:pppv2/widgets/custom_drop_down.dart';
+import 'package:ppp/core/app_export.dart';
+import 'package:ppp/widgets/custom_drop_down.dart';
 
 // ignore_for_file: must_be_immutable
 class MyHistoryScreen extends StatelessWidget {
@@ -12,7 +12,7 @@ class MyHistoryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            backgroundColor: appTheme.whiteA700,
+            backgroundColor: theme.colorScheme.primary,
             body: SizedBox(
                 width: double.maxFinite,
                 child: Container(
@@ -56,7 +56,7 @@ class MyHistoryScreen extends StatelessWidget {
                                                           TextOverflow.ellipsis,
                                                       textAlign: TextAlign.left,
                                                       style: TextThemeHelper
-                                                          .headlineSmallWhiteA700
+                                                          .headlineSmallPrimary
                                                           .copyWith(
                                                               letterSpacing:
                                                                   getHorizontalSize(
@@ -70,11 +70,11 @@ class MyHistoryScreen extends StatelessWidget {
                                                           left: 19, right: 11),
                                                       child: CustomImageView(
                                                           svgPath: ImageConstant
-                                                              .imgArrowdownWhiteA700)),
+                                                              .imgArrowdownPrimary)),
                                                   hintText: "7 Juillet 2023",
                                                   margin: getMargin(top: 1),
                                                   textStyle: TextThemeHelper
-                                                      .titleMediumWhiteA700_1,
+                                                      .titleMediumPrimary_1,
                                                   items: dropdownItemList,
                                                   filled: true,
                                                   fillColor: appTheme.black900
@@ -112,7 +112,7 @@ class MyHistoryScreen extends StatelessWidget {
                                                           right: 11,
                                                           bottom: 6),
                                                       decoration: AppDecoration
-                                                          .outline9
+                                                          .outline10
                                                           .copyWith(
                                                               borderRadius:
                                                                   BorderRadiusStyle
@@ -148,7 +148,7 @@ class MyHistoryScreen extends StatelessWidget {
                                                                               alignment: Alignment.topCenter,
                                                                               children: [
                                                                                 Align(alignment: Alignment.topCenter, child: SizedBox(height: getVerticalSize(49), child: VerticalDivider(width: getHorizontalSize(3), thickness: getVerticalSize(3), color: appTheme.gray400, indent: getHorizontalSize(17)))),
-                                                                                Align(alignment: Alignment.topCenter, child: Container(padding: getPadding(all: 5), decoration: AppDecoration.outline10.copyWith(borderRadius: BorderRadiusStyle.roundedBorder8), child: Container(height: getSize(10), width: getSize(10), decoration: BoxDecoration(color: theme.colorScheme.primary, borderRadius: BorderRadius.circular(getHorizontalSize(5)))))),
+                                                                                Align(alignment: Alignment.topCenter, child: Container(padding: getPadding(all: 5), decoration: AppDecoration.outline11.copyWith(borderRadius: BorderRadiusStyle.roundedBorder8), child: Container(height: getSize(10), width: getSize(10), decoration: BoxDecoration(color: appTheme.yellow600, borderRadius: BorderRadius.circular(getHorizontalSize(5)))))),
                                                                                 CustomImageView(svgPath: ImageConstant.imgLocationPink500, height: getVerticalSize(24), width: getHorizontalSize(18), alignment: Alignment.bottomCenter)
                                                                               ])),
                                                                       Expanded(
@@ -250,7 +250,7 @@ class MyHistoryScreen extends StatelessWidget {
                                                           right: 11,
                                                           bottom: 6),
                                                       decoration: AppDecoration
-                                                          .outline9
+                                                          .outline10
                                                           .copyWith(
                                                               borderRadius:
                                                                   BorderRadiusStyle
@@ -284,7 +284,7 @@ class MyHistoryScreen extends StatelessWidget {
                                                                               alignment: Alignment.topCenter,
                                                                               children: [
                                                                                 Align(alignment: Alignment.topCenter, child: SizedBox(height: getVerticalSize(49), child: VerticalDivider(width: getHorizontalSize(3), thickness: getVerticalSize(3), color: appTheme.gray400, indent: getHorizontalSize(17)))),
-                                                                                Align(alignment: Alignment.topCenter, child: Container(padding: getPadding(all: 5), decoration: AppDecoration.outline10.copyWith(borderRadius: BorderRadiusStyle.roundedBorder8), child: Container(height: getSize(10), width: getSize(10), decoration: BoxDecoration(color: theme.colorScheme.primary, borderRadius: BorderRadius.circular(getHorizontalSize(5)))))),
+                                                                                Align(alignment: Alignment.topCenter, child: Container(padding: getPadding(all: 5), decoration: AppDecoration.outline11.copyWith(borderRadius: BorderRadiusStyle.roundedBorder8), child: Container(height: getSize(10), width: getSize(10), decoration: BoxDecoration(color: appTheme.yellow600, borderRadius: BorderRadius.circular(getHorizontalSize(5)))))),
                                                                                 CustomImageView(svgPath: ImageConstant.imgLocationPink500, height: getVerticalSize(24), width: getHorizontalSize(18), alignment: Alignment.bottomCenter)
                                                                               ])),
                                                                       Padding(

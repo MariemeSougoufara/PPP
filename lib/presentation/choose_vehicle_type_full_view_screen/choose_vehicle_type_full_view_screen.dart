@@ -1,7 +1,7 @@
 import '../choose_vehicle_type_full_view_screen/widgets/listcar_item_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:pppv2/core/app_export.dart';
-import 'package:pppv2/widgets/custom_icon_button.dart';
+import 'package:ppp/core/app_export.dart';
+import 'package:ppp/widgets/custom_icon_button.dart';
 
 class ChooseVehicleTypeFullViewScreen extends StatelessWidget {
   const ChooseVehicleTypeFullViewScreen({Key? key}) : super(key: key);
@@ -10,7 +10,7 @@ class ChooseVehicleTypeFullViewScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            backgroundColor: appTheme.whiteA700,
+            backgroundColor: theme.colorScheme.primary,
             body: SizedBox(
                 width: double.maxFinite,
                 child: SizedBox(
@@ -44,7 +44,8 @@ class ChooseVehicleTypeFullViewScreen extends StatelessWidget {
                                             svgPath: ImageConstant
                                                 .imgArrowleftGray400)),
                                     CustomImageView(
-                                        imagePath: ImageConstant.imgPathPrimary,
+                                        imagePath:
+                                            ImageConstant.imgPathYellow600,
                                         height: getVerticalSize(252),
                                         width: getHorizontalSize(124),
                                         alignment: Alignment.topRight,
@@ -67,14 +68,14 @@ class ChooseVehicleTypeFullViewScreen extends StatelessWidget {
                               clipBehavior: Clip.antiAlias,
                               elevation: 0,
                               margin: EdgeInsets.all(0),
-                              color: appTheme.whiteA700,
+                              color: theme.colorScheme.primary,
                               shape: RoundedRectangleBorder(
                                   borderRadius:
                                       BorderRadiusStyle.customBorderTL16),
                               child: Container(
                                   height: getVerticalSize(526),
                                   width: double.maxFinite,
-                                  decoration: AppDecoration.outline4.copyWith(
+                                  decoration: AppDecoration.outline5.copyWith(
                                       borderRadius:
                                           BorderRadiusStyle.customBorderTL16),
                                   child: Stack(

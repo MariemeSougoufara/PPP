@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart' as fs;
-import 'package:pppv2/core/app_export.dart';
+import 'package:ppp/core/app_export.dart';
 
 class SplashScreensScreen extends StatelessWidget {
   const SplashScreensScreen({Key? key})
@@ -12,7 +12,7 @@ class SplashScreensScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: theme.colorScheme.primary,
+        backgroundColor: appTheme.yellow600,
         body: SizedBox(
           width: double.maxFinite,
           child: Column(
@@ -45,7 +45,7 @@ class SplashScreensScreen extends StatelessWidget {
                       borderRadius: BorderRadiusStyle.roundedBorder34,
                       image: DecorationImage(
                         image: fs.Svg(
-                          ImageConstant.imgGroup341,
+                          ImageConstant.imgGroup342,
                         ),
                         fit: BoxFit.cover,
                       ),

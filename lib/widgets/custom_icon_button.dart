@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pppv2/core/app_export.dart';
+import 'package:ppp/core/app_export.dart';
 
 class CustomIconButton extends StatelessWidget {
   CustomIconButton({
@@ -58,14 +58,14 @@ class CustomIconButton extends StatelessWidget {
             padding: padding ?? EdgeInsets.zero,
             decoration: decoration ??
                 BoxDecoration(
-                  color: appTheme.whiteA700,
+                  color: theme.colorScheme.primary,
                   borderRadius: BorderRadius.circular(
                     getHorizontalSize(
                       22.00,
                     ),
                   ),
                   border: Border.all(
-                    color: appTheme.whiteA700,
+                    color: theme.colorScheme.primary,
                     width: getHorizontalSize(
                       2.00,
                     ),
@@ -96,7 +96,7 @@ class CustomIconButton extends StatelessWidget {
 /// Extension on [CustomIconButton] to facilitate inclusion of all types of border style etc
 extension IconButtonStyleHelper on CustomIconButton {
   static BoxDecoration get outlineBlack900 => BoxDecoration(
-        color: appTheme.whiteA700,
+        color: theme.colorScheme.primary,
         borderRadius: BorderRadius.circular(
           getHorizontalSize(
             22.00,
@@ -134,8 +134,8 @@ extension IconButtonStyleHelper on CustomIconButton {
           ),
         ),
       );
-  static BoxDecoration get fillPrimary => BoxDecoration(
-        color: theme.colorScheme.primary,
+  static BoxDecoration get fillYellow600 => BoxDecoration(
+        color: appTheme.yellow600,
         borderRadius: BorderRadius.circular(
           getHorizontalSize(
             20.00,
@@ -158,8 +158,8 @@ extension IconButtonStyleHelper on CustomIconButton {
           ),
         ),
       );
-  static BoxDecoration get fillPrimaryTL25 => BoxDecoration(
-        color: theme.colorScheme.primary,
+  static BoxDecoration get fillYellow600TL25 => BoxDecoration(
+        color: appTheme.yellow600,
         borderRadius: BorderRadius.circular(
           getHorizontalSize(
             25.00,

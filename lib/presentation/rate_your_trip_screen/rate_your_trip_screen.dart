@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:pppv2/core/app_export.dart';
-import 'package:pppv2/widgets/app_bar/appbar_image.dart';
-import 'package:pppv2/widgets/app_bar/appbar_title.dart';
-import 'package:pppv2/widgets/app_bar/custom_app_bar.dart';
-import 'package:pppv2/widgets/custom_elevated_button.dart';
-import 'package:pppv2/widgets/custom_text_form_field.dart';
+import 'package:ppp/core/app_export.dart';
+import 'package:ppp/widgets/app_bar/appbar_image.dart';
+import 'package:ppp/widgets/app_bar/appbar_title.dart';
+import 'package:ppp/widgets/app_bar/custom_app_bar.dart';
+import 'package:ppp/widgets/custom_elevated_button.dart';
+import 'package:ppp/widgets/custom_text_form_field.dart';
 
 // ignore_for_file: must_be_immutable
 class RateYourTripScreen extends StatelessWidget {
@@ -16,7 +16,7 @@ class RateYourTripScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            backgroundColor: theme.colorScheme.primary,
+            backgroundColor: appTheme.yellow600,
             resizeToAvoidBottomInset: false,
             appBar: CustomAppBar(
                 height: getVerticalSize(48),
@@ -41,7 +41,7 @@ class RateYourTripScreen extends StatelessWidget {
                       child: Container(
                           padding: getPadding(
                               left: 16, top: 21, right: 16, bottom: 21),
-                          decoration: AppDecoration.outline.copyWith(
+                          decoration: AppDecoration.outline1.copyWith(
                               borderRadius: BorderRadiusStyle.roundedBorder8),
                           child: Column(
                               mainAxisSize: MainAxisSize.min,
@@ -56,8 +56,8 @@ class RateYourTripScreen extends StatelessWidget {
                                 Text("652 - UKW",
                                     overflow: TextOverflow.ellipsis,
                                     textAlign: TextAlign.left,
-                                    style: TextThemeHelper
-                                        .bodyMediumErrorContainer),
+                                    style:
+                                        TextThemeHelper.bodyMediumBluegray400),
                                 Padding(
                                     padding: getPadding(top: 24),
                                     child: Text(
@@ -78,7 +78,7 @@ class RateYourTripScreen extends StatelessWidget {
                                         overflow: TextOverflow.ellipsis,
                                         textAlign: TextAlign.center,
                                         style: TextThemeHelper
-                                            .bodyLargeErrorContainer
+                                            .bodyLargeBluegray400
                                             .copyWith(
                                                 letterSpacing:
                                                     getHorizontalSize(0.41)))),
@@ -127,10 +127,7 @@ class RateYourTripScreen extends StatelessWidget {
                                                     Size(double.maxFinite,
                                                         getVerticalSize(45)))),
                                     buttonTextStyle:
-                                        TextThemeHelper.titleMediumWhiteA700_1,
-                                    onTap: () {
-                                      onTapSoumettreun(context);
-                                    })
+                                        TextThemeHelper.titleMediumPrimary_1)
                               ]))),
                   CustomImageView(
                       imagePath: ImageConstant.imgOval295x95,
@@ -147,14 +144,5 @@ class RateYourTripScreen extends StatelessWidget {
   /// to navigate back to the previous screen.
   onTapArrowleft(BuildContext context) {
     Navigator.pop(context);
-  }
-
-  /// Navigates to the tipsScreen when the action is triggered.
-  ///
-  /// The [BuildContext] parameter is used to build the navigation stack.
-  /// When the action is triggered, this function uses the `Navigator` widget
-  /// to push the named route for the tipsScreen.
-  onTapSoumettreun(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.tipsScreen);
   }
 }

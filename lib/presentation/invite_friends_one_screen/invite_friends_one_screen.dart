@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart' as fs;
-import 'package:pppv2/core/app_export.dart';
-import 'package:pppv2/widgets/custom_elevated_button.dart';
+import 'package:ppp/core/app_export.dart';
+import 'package:ppp/widgets/custom_elevated_button.dart';
 
 class InviteFriendsOneScreen extends StatelessWidget {
   const InviteFriendsOneScreen({Key? key}) : super(key: key);
@@ -10,7 +10,7 @@ class InviteFriendsOneScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            backgroundColor: appTheme.whiteA700,
+            backgroundColor: theme.colorScheme.primary,
             body: SizedBox(
                 width: double.maxFinite,
                 child: SingleChildScrollView(
@@ -69,7 +69,7 @@ class InviteFriendsOneScreen extends StatelessWidget {
                                                           TextOverflow.ellipsis,
                                                       textAlign: TextAlign.left,
                                                       style: TextThemeHelper
-                                                          .headlineSmallOnSecondaryContainer
+                                                          .headlineSmallOnPrimary
                                                           .copyWith(
                                                               letterSpacing:
                                                                   getHorizontalSize(
@@ -89,14 +89,14 @@ class InviteFriendsOneScreen extends StatelessWidget {
                                             child: Divider(
                                                 height: getVerticalSize(3),
                                                 thickness: getVerticalSize(3),
-                                                color: theme.colorScheme
-                                                    .onSecondaryContainer)),
+                                                color: theme
+                                                    .colorScheme.onPrimary)),
                                         CustomElevatedButton(
                                             text: "Inviter des Amis",
                                             margin:
                                                 getMargin(top: 39, bottom: 14),
                                             buttonStyle: ButtonThemeHelper
-                                                .fillPrimary
+                                                .fillYellow600
                                                 .copyWith(
                                                     fixedSize:
                                                         MaterialStateProperty
@@ -106,10 +106,7 @@ class InviteFriendsOneScreen extends StatelessWidget {
                                                                 getVerticalSize(
                                                                     45)))),
                                             buttonTextStyle: TextThemeHelper
-                                                .titleMediumWhiteA700_1,
-                                            onTap: () {
-                                              onTapInviterdes(context);
-                                            })
+                                                .titleMediumPrimary_1)
                                       ]))),
                           Align(
                               alignment: Alignment.topCenter,
@@ -207,7 +204,7 @@ class InviteFriendsOneScreen extends StatelessWidget {
                                                         TextOverflow.ellipsis,
                                                     textAlign: TextAlign.left,
                                                     style: TextThemeHelper
-                                                        .titleMediumWhiteA700
+                                                        .titleMediumPrimary
                                                         .copyWith(
                                                             letterSpacing:
                                                                 getHorizontalSize(
@@ -222,14 +219,5 @@ class InviteFriendsOneScreen extends StatelessWidget {
   /// to navigate back to the previous screen.
   onTapImgArrowleft(BuildContext context) {
     Navigator.pop(context);
-  }
-
-  /// Navigates to the inviteFriendsScreen when the action is triggered.
-  ///
-  /// The [BuildContext] parameter is used to build the navigation stack.
-  /// When the action is triggered, this function uses the `Navigator` widget
-  /// to push the named route for the inviteFriendsScreen.
-  onTapInviterdes(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.inviteFriendsScreen);
   }
 }

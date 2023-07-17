@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:pppv2/core/app_export.dart';
-import 'package:pppv2/widgets/app_bar/appbar_image.dart';
-import 'package:pppv2/widgets/app_bar/appbar_title.dart';
-import 'package:pppv2/widgets/app_bar/custom_app_bar.dart';
-import 'package:pppv2/widgets/custom_elevated_button.dart';
+import 'package:ppp/core/app_export.dart';
+import 'package:ppp/widgets/app_bar/appbar_image.dart';
+import 'package:ppp/widgets/app_bar/appbar_title.dart';
+import 'package:ppp/widgets/app_bar/custom_app_bar.dart';
+import 'package:ppp/widgets/custom_elevated_button.dart';
 
 class TipsScreen extends StatelessWidget {
   const TipsScreen({Key? key}) : super(key: key);
@@ -12,7 +12,7 @@ class TipsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            backgroundColor: theme.colorScheme.primary,
+            backgroundColor: appTheme.yellow600,
             appBar: CustomAppBar(
                 height: getVerticalSize(48),
                 leadingWidth: 28,
@@ -36,7 +36,7 @@ class TipsScreen extends StatelessWidget {
                       child: Container(
                           padding: getPadding(
                               left: 9, top: 19, right: 9, bottom: 19),
-                          decoration: AppDecoration.outline.copyWith(
+                          decoration: AppDecoration.outline1.copyWith(
                               borderRadius: BorderRadiusStyle.roundedBorder8),
                           child: Column(
                               mainAxisSize: MainAxisSize.min,
@@ -64,7 +64,7 @@ class TipsScreen extends StatelessWidget {
                                                       TextOverflow.ellipsis,
                                                   textAlign: TextAlign.left,
                                                   style: TextThemeHelper
-                                                      .bodyMediumErrorContainer))
+                                                      .bodyMediumBluegray400))
                                         ])),
                                 Container(
                                     width: getHorizontalSize(323),
@@ -132,7 +132,7 @@ class TipsScreen extends StatelessWidget {
                                                       textAlign:
                                                           TextAlign.center,
                                                       style: TextThemeHelper
-                                                          .titleLargeWhiteA700Bold
+                                                          .titleLargePrimaryBold
                                                           .copyWith(
                                                               letterSpacing:
                                                                   getHorizontalSize(
@@ -188,10 +188,7 @@ class TipsScreen extends StatelessWidget {
                                                     Size(double.maxFinite,
                                                         getVerticalSize(45)))),
                                     buttonTextStyle:
-                                        TextThemeHelper.titleMediumWhiteA700_1,
-                                    onTap: () {
-                                      onTapTermin(context);
-                                    }),
+                                        TextThemeHelper.titleMediumPrimary_1),
                                 Padding(
                                     padding: getPadding(top: 21),
                                     child: Text("Peut-être la prochaine fois",
@@ -217,14 +214,5 @@ class TipsScreen extends StatelessWidget {
   /// to navigate back to the previous screen.
   onTapArrowleft1(BuildContext context) {
     Navigator.pop(context);
-  }
-
-  /// Navigates to the homeScreen when the action is triggered.
-  ///
-  /// The [BuildContext] parameter is used to build the navigation stack.
-  /// When the action is triggered, this function uses the `Navigator` widget
-  /// to push the named route for the homeScreen.
-  onTapTermin(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.homeScreen);
   }
 }

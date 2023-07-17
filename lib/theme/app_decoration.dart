@@ -1,24 +1,42 @@
 import 'package:flutter/material.dart';
-import 'package:pppv2/core/app_export.dart';
+import 'package:ppp/core/app_export.dart';
 
 class AppDecoration {
   static BoxDecoration get fill => BoxDecoration(
-        color: theme.colorScheme.primary,
+        color: appTheme.yellow600,
       );
   static BoxDecoration get txtFill => BoxDecoration(
-        color: appTheme.whiteA700,
+        color: theme.colorScheme.primary,
       );
   static BoxDecoration get outline10 => BoxDecoration(
-        color: appTheme.whiteA700,
+        color: theme.colorScheme.primary,
+        boxShadow: [
+          BoxShadow(
+            color: appTheme.black900.withOpacity(0.1),
+            spreadRadius: getHorizontalSize(
+              2,
+            ),
+            blurRadius: getHorizontalSize(
+              2,
+            ),
+            offset: Offset(
+              0,
+              0,
+            ),
+          ),
+        ],
+      );
+  static BoxDecoration get outline11 => BoxDecoration(
+        color: theme.colorScheme.primary,
         border: Border.all(
-          color: theme.colorScheme.primary,
+          color: appTheme.yellow600,
           width: getHorizontalSize(
             2,
           ),
         ),
       );
-  static BoxDecoration get outline11 => BoxDecoration(
-        color: appTheme.whiteA700,
+  static BoxDecoration get outline12 => BoxDecoration(
+        color: theme.colorScheme.primary,
         border: Border.all(
           color: appTheme.blueGray5001,
           width: getHorizontalSize(
@@ -27,8 +45,8 @@ class AppDecoration {
           strokeAlign: strokeAlignCenter,
         ),
       );
-  static BoxDecoration get outline12 => BoxDecoration(
-        color: appTheme.gray5001,
+  static BoxDecoration get outline13 => BoxDecoration(
+        color: theme.colorScheme.onError.withOpacity(1),
         border: Border.all(
           color: appTheme.blueGray5001,
           width: getHorizontalSize(
@@ -37,22 +55,13 @@ class AppDecoration {
         ),
       );
   static BoxDecoration get outline => BoxDecoration(
-        color: appTheme.whiteA700,
-        boxShadow: [
-          BoxShadow(
-            color: appTheme.black900.withOpacity(0.1),
-            spreadRadius: getHorizontalSize(
-              2,
-            ),
-            blurRadius: getHorizontalSize(
-              2,
-            ),
-            offset: Offset(
-              0,
-              -5,
-            ),
+        border: Border.all(
+          color: appTheme.yellow600,
+          width: getHorizontalSize(
+            2,
           ),
-        ],
+          strokeAlign: strokeAlignCenter,
+        ),
       );
   static BoxDecoration get fill9 => BoxDecoration(
         color: appTheme.indigoA400,
@@ -61,27 +70,6 @@ class AppDecoration {
         color: appTheme.blueGray5001,
       );
   static BoxDecoration get outline2 => BoxDecoration(
-        color: appTheme.whiteA700.withOpacity(0.69),
-        boxShadow: [
-          BoxShadow(
-            color: appTheme.black900.withOpacity(0.1),
-            spreadRadius: getHorizontalSize(
-              2,
-            ),
-            blurRadius: getHorizontalSize(
-              2,
-            ),
-            offset: Offset(
-              0,
-              -5,
-            ),
-          ),
-        ],
-      );
-  static BoxDecoration get fill5 => BoxDecoration(
-        color: theme.colorScheme.secondaryContainer,
-      );
-  static BoxDecoration get outline1 => BoxDecoration(
         border: Border.all(
           color: appTheme.blueGray5001,
           width: getHorizontalSize(
@@ -89,11 +77,11 @@ class AppDecoration {
           ),
         ),
       );
-  static BoxDecoration get fill4 => BoxDecoration(
-        color: appTheme.gray5001.withOpacity(0.82),
+  static BoxDecoration get fill5 => BoxDecoration(
+        color: theme.colorScheme.secondaryContainer,
       );
-  static BoxDecoration get outline4 => BoxDecoration(
-        color: appTheme.whiteA700,
+  static BoxDecoration get outline1 => BoxDecoration(
+        color: theme.colorScheme.primary,
         boxShadow: [
           BoxShadow(
             color: appTheme.black900.withOpacity(0.1),
@@ -110,39 +98,68 @@ class AppDecoration {
           ),
         ],
       );
-  static BoxDecoration get fill7 => BoxDecoration(
-        color: appTheme.blueGray5001.withOpacity(0.4),
+  static BoxDecoration get fill4 => BoxDecoration(
+        color: theme.colorScheme.onError,
       );
-  static BoxDecoration get outline3 => BoxDecoration(
-        color: appTheme.whiteA700,
+  static BoxDecoration get outline4 => BoxDecoration(
+        color: theme.colorScheme.primary,
         border: Border.all(
-          color: theme.colorScheme.primary,
+          color: appTheme.yellow600,
           width: getHorizontalSize(
             2,
           ),
         ),
       );
+  static BoxDecoration get fill7 => BoxDecoration(
+        color: appTheme.blueGray5001.withOpacity(0.4),
+      );
+  static BoxDecoration get outline3 => BoxDecoration(
+        color: theme.colorScheme.primary.withOpacity(0.69),
+        boxShadow: [
+          BoxShadow(
+            color: appTheme.black900.withOpacity(0.1),
+            spreadRadius: getHorizontalSize(
+              2,
+            ),
+            blurRadius: getHorizontalSize(
+              2,
+            ),
+            offset: Offset(
+              0,
+              -5,
+            ),
+          ),
+        ],
+      );
   static BoxDecoration get fill6 => BoxDecoration(
         color: theme.colorScheme.onErrorContainer,
       );
   static BoxDecoration get fill1 => BoxDecoration(
-        color: appTheme.whiteA700,
+        color: theme.colorScheme.primary,
       );
   static BoxDecoration get outline6 => BoxDecoration(
-        color: appTheme.whiteA700,
-        border: Border.all(
-          color: appTheme.gray200,
-          width: getHorizontalSize(
-            1,
+        color: appTheme.gray50,
+        boxShadow: [
+          BoxShadow(
+            color: appTheme.black900.withOpacity(0.1),
+            spreadRadius: getHorizontalSize(
+              2,
+            ),
+            blurRadius: getHorizontalSize(
+              2,
+            ),
+            offset: Offset(
+              0,
+              -5,
+            ),
           ),
-          strokeAlign: strokeAlignCenter,
-        ),
+        ],
       );
   static BoxDecoration get fill12 => BoxDecoration(
         color: appTheme.gray50,
       );
   static BoxDecoration get outline5 => BoxDecoration(
-        color: appTheme.gray50,
+        color: theme.colorScheme.primary,
         boxShadow: [
           BoxShadow(
             color: appTheme.black900.withOpacity(0.1),
@@ -160,34 +177,13 @@ class AppDecoration {
         ],
       );
   static BoxDecoration get fill11 => BoxDecoration(
-        color: theme.colorScheme.onPrimary,
+        color: appTheme.gray900,
       );
   static BoxDecoration get fill3 => BoxDecoration(
         color: appTheme.blue700,
       );
   static BoxDecoration get outline8 => BoxDecoration(
-        color: appTheme.whiteA700,
-        boxShadow: [
-          BoxShadow(
-            color: appTheme.black900.withOpacity(0.3),
-            spreadRadius: getHorizontalSize(
-              2,
-            ),
-            blurRadius: getHorizontalSize(
-              2,
-            ),
-            offset: Offset(
-              0,
-              5,
-            ),
-          ),
-        ],
-      );
-  static BoxDecoration get fill2 => BoxDecoration(
-        color: appTheme.gray5001,
-      );
-  static BoxDecoration get outline7 => BoxDecoration(
-        color: appTheme.whiteA700.withOpacity(0.69),
+        color: theme.colorScheme.primary.withOpacity(0.69),
         boxShadow: [
           BoxShadow(
             color: appTheme.black900.withOpacity(0.1),
@@ -204,11 +200,24 @@ class AppDecoration {
           ),
         ],
       );
+  static BoxDecoration get fill2 => BoxDecoration(
+        color: theme.colorScheme.onError.withOpacity(1),
+      );
+  static BoxDecoration get outline7 => BoxDecoration(
+        color: theme.colorScheme.primary,
+        border: Border.all(
+          color: appTheme.gray200,
+          width: getHorizontalSize(
+            1,
+          ),
+          strokeAlign: strokeAlignCenter,
+        ),
+      );
   static BoxDecoration get outline9 => BoxDecoration(
-        color: appTheme.whiteA700,
+        color: theme.colorScheme.primary,
         boxShadow: [
           BoxShadow(
-            color: appTheme.black900.withOpacity(0.1),
+            color: appTheme.black900.withOpacity(0.3),
             spreadRadius: getHorizontalSize(
               2,
             ),
@@ -217,7 +226,7 @@ class AppDecoration {
             ),
             offset: Offset(
               0,
-              0,
+              5,
             ),
           ),
         ],
@@ -234,12 +243,6 @@ class BorderRadiusStyle {
     ),
   );
 
-  static BorderRadius roundedBorder27 = BorderRadius.circular(
-    getHorizontalSize(
-      27,
-    ),
-  );
-
   static BorderRadius circleBorder44 = BorderRadius.circular(
     getHorizontalSize(
       44,
@@ -252,9 +255,9 @@ class BorderRadiusStyle {
     ),
   );
 
-  static BorderRadius circleBorder24 = BorderRadius.circular(
+  static BorderRadius circleBorder25 = BorderRadius.circular(
     getHorizontalSize(
-      24,
+      25,
     ),
   );
 

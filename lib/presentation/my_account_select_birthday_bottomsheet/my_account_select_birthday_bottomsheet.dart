@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pppv2/core/app_export.dart';
-import 'package:pppv2/widgets/custom_elevated_button.dart';
+import 'package:ppp/core/app_export.dart';
+import 'package:ppp/widgets/custom_elevated_button.dart';
 
 class MyAccountSelectBirthdayBottomsheet extends StatelessWidget {
   const MyAccountSelectBirthdayBottomsheet({Key? key}) : super(key: key);
@@ -62,16 +62,12 @@ class MyAccountSelectBirthdayBottomsheet extends StatelessWidget {
                       CustomElevatedButton(
                           text: "Enregistrer",
                           margin: getMargin(left: 16, right: 15, bottom: 121),
-                          buttonStyle: ButtonThemeHelper.fillPrimaryTL16
+                          buttonStyle: ButtonThemeHelper.fillYellow600TL16
                               .copyWith(
                                   fixedSize: MaterialStateProperty.all<Size>(
                                       Size(double.maxFinite,
                                           getVerticalSize(45)))),
-                          buttonTextStyle:
-                              TextThemeHelper.titleMediumWhiteA700_1,
-                          onTap: () {
-                            onTapEnregistrer(context);
-                          })
+                          buttonTextStyle: TextThemeHelper.titleMediumPrimary_1)
                     ]))));
   }
 
@@ -81,14 +77,5 @@ class MyAccountSelectBirthdayBottomsheet extends StatelessWidget {
   /// to navigate back to the previous screen.
   onTapImgClose(BuildContext context) {
     Navigator.pop(context);
-  }
-
-  /// Navigates to the myAccountScreen when the action is triggered.
-  ///
-  /// The [BuildContext] parameter is used to build the navigation stack.
-  /// When the action is triggered, this function uses the `Navigator` widget
-  /// to push the named route for the myAccountScreen.
-  onTapEnregistrer(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.myAccountScreen);
   }
 }

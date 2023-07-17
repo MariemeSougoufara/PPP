@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:pppv2/core/app_export.dart';
-import 'package:pppv2/widgets/app_bar/appbar_image.dart';
-import 'package:pppv2/widgets/app_bar/appbar_title.dart';
-import 'package:pppv2/widgets/app_bar/custom_app_bar.dart';
-import 'package:pppv2/widgets/custom_icon_button.dart';
-import 'package:pppv2/widgets/custom_text_form_field.dart';
+import 'package:ppp/core/app_export.dart';
+import 'package:ppp/widgets/app_bar/appbar_image.dart';
+import 'package:ppp/widgets/app_bar/appbar_title.dart';
+import 'package:ppp/widgets/app_bar/custom_app_bar.dart';
+import 'package:ppp/widgets/custom_icon_button.dart';
+import 'package:ppp/widgets/custom_text_form_field.dart';
 
 // ignore_for_file: must_be_immutable
 class PaymentMethodScreen extends StatelessWidget {
@@ -22,7 +22,7 @@ class PaymentMethodScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            backgroundColor: appTheme.gray5001.withOpacity(0.82),
+            backgroundColor: theme.colorScheme.onError,
             resizeToAvoidBottomInset: false,
             body: Form(
                 key: _formKey,
@@ -77,11 +77,7 @@ class PaymentMethodScreen extends StatelessWidget {
                                                             text: "Terminé",
                                                             margin: getMargin(
                                                                 left: 15,
-                                                                right: 15),
-                                                            onTap: () {
-                                                              onTapDone(
-                                                                  context);
-                                                            })
+                                                                right: 15))
                                                       ]),
                                                   Padding(
                                                       padding: getPadding(
@@ -108,7 +104,7 @@ class PaymentMethodScreen extends StatelessWidget {
                                                 left: 16, top: 116, right: 15),
                                             padding:
                                                 getPadding(top: 19, bottom: 19),
-                                            decoration: AppDecoration.outline
+                                            decoration: AppDecoration.outline1
                                                 .copyWith(
                                                     borderRadius:
                                                         BorderRadiusStyle
@@ -125,10 +121,10 @@ class PaymentMethodScreen extends StatelessWidget {
                                                           getPadding(all: 10),
                                                       decoration:
                                                           IconButtonStyleHelper
-                                                              .fillPrimaryTL25,
+                                                              .fillYellow600TL25,
                                                       child: CustomImageView(
                                                           svgPath: ImageConstant
-                                                              .imgReplyWhiteA700)),
+                                                              .imgReplyPrimary)),
                                                   Padding(
                                                       padding:
                                                           getPadding(top: 2),
@@ -181,7 +177,7 @@ class PaymentMethodScreen extends StatelessWidget {
                                       getMargin(left: 16, top: 20, right: 15),
                                   padding: getPadding(
                                       left: 17, top: 24, right: 17, bottom: 24),
-                                  decoration: AppDecoration.outline.copyWith(
+                                  decoration: AppDecoration.outline1.copyWith(
                                       borderRadius:
                                           BorderRadiusStyle.roundedBorder8),
                                   child: Column(
@@ -197,7 +193,7 @@ class PaymentMethodScreen extends StatelessWidget {
                                                 overflow: TextOverflow.ellipsis,
                                                 textAlign: TextAlign.left,
                                                 style: TextThemeHelper
-                                                    .titleSmallOnPrimary_1)),
+                                                    .titleSmallGray900_1)),
                                         CustomTextFormField(
                                             focusNode: FocusNode(),
                                             autofocus: true,
@@ -207,10 +203,10 @@ class PaymentMethodScreen extends StatelessWidget {
                                             contentPadding: getPadding(
                                                 top: 18, right: 51, bottom: 18),
                                             textStyle: TextThemeHelper
-                                                .bodyLargeOnPrimary,
+                                                .bodyLargeGray900,
                                             hintText: "**** **** **** 5967",
                                             hintStyle: TextThemeHelper
-                                                .bodyLargeOnPrimary,
+                                                .bodyLargeGray900,
                                             textInputAction:
                                                 TextInputAction.next,
                                             prefix: Container(
@@ -227,7 +223,8 @@ class PaymentMethodScreen extends StatelessWidget {
                                             prefixConstraints: BoxConstraints(
                                                 maxHeight: getVerticalSize(58)),
                                             filled: true,
-                                            fillColor: appTheme.gray5001),
+                                            fillColor: theme.colorScheme.onError
+                                                .withOpacity(1)),
                                         CustomTextFormField(
                                             focusNode: FocusNode(),
                                             autofocus: true,
@@ -236,10 +233,10 @@ class PaymentMethodScreen extends StatelessWidget {
                                             contentPadding:
                                                 getPadding(top: 18, bottom: 18),
                                             textStyle: TextThemeHelper
-                                                .bodyLargeOnPrimary,
+                                                .bodyLargeGray900,
                                             hintText: "awa.gueye@boudin.info",
                                             hintStyle: TextThemeHelper
-                                                .bodyLargeOnPrimary,
+                                                .bodyLargeGray900,
                                             textInputAction:
                                                 TextInputAction.next,
                                             textInputType:
@@ -262,26 +259,27 @@ class PaymentMethodScreen extends StatelessWidget {
                                                     right: 16,
                                                     bottom: 17),
                                                 decoration: BoxDecoration(
-                                                    color: theme
-                                                        .colorScheme.primary),
+                                                    color: appTheme.yellow600),
                                                 child: CustomImageView(
                                                     svgPath: ImageConstant
-                                                        .imgCheckmarkPrimary)),
+                                                        .imgCheckmarkYellow600)),
                                             suffixConstraints: BoxConstraints(
                                                 maxHeight: getVerticalSize(58)),
                                             filled: true,
-                                            fillColor: appTheme.gray5001,
+                                            fillColor: theme.colorScheme.onError
+                                                .withOpacity(1),
                                             defaultBorderDecoration:
                                                 TextFormFieldStyleHelper
-                                                    .outlinePrimary,
+                                                    .outlineYellow600,
                                             enabledBorderDecoration:
                                                 TextFormFieldStyleHelper
-                                                    .outlinePrimary,
+                                                    .outlineYellow600,
                                             focusedBorderDecoration:
                                                 TextFormFieldStyleHelper
-                                                    .outlinePrimary,
+                                                    .outlineYellow600,
                                             disabledBorderDecoration:
-                                                TextFormFieldStyleHelper.outlinePrimary),
+                                                TextFormFieldStyleHelper
+                                                    .outlineYellow600),
                                         CustomTextFormField(
                                             focusNode: FocusNode(),
                                             autofocus: true,
@@ -291,10 +289,10 @@ class PaymentMethodScreen extends StatelessWidget {
                                             contentPadding: getPadding(
                                                 top: 18, right: 51, bottom: 18),
                                             textStyle: TextThemeHelper
-                                                .bodyLargeOnPrimary,
+                                                .bodyLargeGray900,
                                             hintText: "**** **** **** 3461",
                                             hintStyle: TextThemeHelper
-                                                .bodyLargeOnPrimary,
+                                                .bodyLargeGray900,
                                             prefix: Container(
                                                 margin: getMargin(
                                                     left: 10,
@@ -307,7 +305,8 @@ class PaymentMethodScreen extends StatelessWidget {
                                             prefixConstraints: BoxConstraints(
                                                 maxHeight: getVerticalSize(58)),
                                             filled: true,
-                                            fillColor: appTheme.gray5001),
+                                            fillColor: theme.colorScheme.onError
+                                                .withOpacity(1)),
                                         Container(
                                             width: getHorizontalSize(310),
                                             margin: getMargin(top: 10),
@@ -316,7 +315,7 @@ class PaymentMethodScreen extends StatelessWidget {
                                                 top: 5,
                                                 right: 10,
                                                 bottom: 5),
-                                            decoration: AppDecoration.outline12
+                                            decoration: AppDecoration.outline13
                                                 .copyWith(
                                                     borderRadius:
                                                         BorderRadiusStyle
@@ -337,7 +336,7 @@ class PaymentMethodScreen extends StatelessWidget {
                                                 top: 6,
                                                 right: 10,
                                                 bottom: 6),
-                                            decoration: AppDecoration.outline12
+                                            decoration: AppDecoration.outline13
                                                 .copyWith(
                                                     borderRadius:
                                                         BorderRadiusStyle
@@ -365,9 +364,8 @@ class PaymentMethodScreen extends StatelessWidget {
                       child: Text("Ajouter une nouvelle méthode",
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
-                          style: TextThemeHelper.titleMediumWhiteA700_1
-                              .copyWith(
-                                  letterSpacing: getHorizontalSize(0.41))))
+                          style: TextThemeHelper.titleMediumPrimary_1.copyWith(
+                              letterSpacing: getHorizontalSize(0.41))))
                 ]))));
   }
 
@@ -377,14 +375,5 @@ class PaymentMethodScreen extends StatelessWidget {
   /// to navigate back to the previous screen.
   onTapArrowleft2(BuildContext context) {
     Navigator.pop(context);
-  }
-
-  /// Navigates to the selectConfortTypeScreen when the action is triggered.
-  ///
-  /// The [BuildContext] parameter is used to build the navigation stack.
-  /// When the action is triggered, this function uses the `Navigator` widget
-  /// to push the named route for the selectConfortTypeScreen.
-  onTapDone(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.selectConfortTypeScreen);
   }
 }

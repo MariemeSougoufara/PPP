@@ -4,7 +4,6 @@
 - [Description](#description)
 - [Fonctionnalités principales](#fonctionnalités-principales)
 - [Exigences système](#exigences-système)
-- [Structure de l'application](#structure-de-lapplication)
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Utilisation](#utilisation)
@@ -22,10 +21,6 @@ Ce projet vise à concevoir et développer une application mobile innovante pour
 ## Exigences système
 - Dart SDK Version 2.18.0 ou supérieure
 - Flutter SDK Version 3.3.0 ou supérieure
-
-## Structure de l'application
-
-
 
 ### System requirements
 

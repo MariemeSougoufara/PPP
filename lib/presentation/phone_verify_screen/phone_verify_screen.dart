@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
-import 'package:pppv2/core/app_export.dart';
-import 'package:pppv2/widgets/custom_elevated_button.dart';
+import 'package:ppp/core/app_export.dart';
+import 'package:ppp/widgets/custom_elevated_button.dart';
 
 class PhoneVerifyScreen extends StatelessWidget {
   const PhoneVerifyScreen({Key? key}) : super(key: key);
@@ -11,7 +11,7 @@ class PhoneVerifyScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            backgroundColor: appTheme.gray5001.withOpacity(0.82),
+            backgroundColor: theme.colorScheme.onError,
             resizeToAvoidBottomInset: false,
             body: SizedBox(
                 width: double.maxFinite,
@@ -42,7 +42,7 @@ class PhoneVerifyScreen extends StatelessWidget {
                                             overflow: TextOverflow.ellipsis,
                                             textAlign: TextAlign.left,
                                             style: TextThemeHelper
-                                                .headlineLargeWhiteA700
+                                                .headlineLargePrimary
                                                 .copyWith(
                                                     letterSpacing:
                                                         getHorizontalSize(
@@ -54,7 +54,7 @@ class PhoneVerifyScreen extends StatelessWidget {
                                             overflow: TextOverflow.ellipsis,
                                             textAlign: TextAlign.left,
                                             style: TextThemeHelper
-                                                .bodyLargeWhiteA700))
+                                                .bodyLargePrimary))
                                   ]))),
                       Padding(
                           padding: getPadding(left: 35, top: 77, right: 37),
@@ -71,16 +71,16 @@ class PhoneVerifyScreen extends StatelessWidget {
                               ],
                               onChanged: (value) {},
                               textStyle: TextStyle(
-                                  color: theme.colorScheme.onSecondaryContainer,
+                                  color: theme.colorScheme.onPrimary,
                                   fontSize: getFontSize(36),
                                   fontFamily: 'Source Sans Pro',
                                   fontWeight: FontWeight.w600),
                               pinTheme: PinTheme(
                                   fieldWidth: getHorizontalSize(60),
                                   shape: PinCodeFieldShape.underline,
-                                  selectedFillColor: theme.colorScheme.onError,
-                                  activeFillColor: theme.colorScheme.onError,
-                                  inactiveFillColor: theme.colorScheme.onError,
+                                  selectedFillColor: appTheme.blueGray100,
+                                  activeFillColor: appTheme.blueGray100,
+                                  inactiveFillColor: appTheme.blueGray100,
                                   inactiveColor: Color(0X1212121D),
                                   selectedColor: Color(0X1212121D),
                                   activeColor: Color(0X1212121D)))),
@@ -88,14 +88,10 @@ class PhoneVerifyScreen extends StatelessWidget {
                           text: "Vérifier ",
                           margin: getMargin(
                               left: 37, top: 73, right: 37, bottom: 5),
-                          buttonStyle: ButtonThemeHelper.fillPrimary.copyWith(
+                          buttonStyle: ButtonThemeHelper.fillYellow600.copyWith(
                               fixedSize: MaterialStateProperty.all<Size>(
                                   Size(double.maxFinite, getVerticalSize(45)))),
-                          buttonTextStyle:
-                              TextThemeHelper.titleMediumWhiteA700_1,
-                          onTap: () {
-                            onTapVrifier(context);
-                          })
+                          buttonTextStyle: TextThemeHelper.titleMediumPrimary_1)
                     ]))));
   }
 
@@ -105,14 +101,5 @@ class PhoneVerifyScreen extends StatelessWidget {
   /// to navigate back to the previous screen.
   onTapImgArrowleft(BuildContext context) {
     Navigator.pop(context);
-  }
-
-  /// Navigates to the homeScreen when the action is triggered.
-  ///
-  /// The [BuildContext] parameter is used to build the navigation stack.
-  /// When the action is triggered, this function uses the `Navigator` widget
-  /// to push the named route for the homeScreen.
-  onTapVrifier(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.homeScreen);
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pppv2/core/app_export.dart';
-import 'package:pppv2/widgets/custom_text_form_field.dart';
+import 'package:ppp/core/app_export.dart';
+import 'package:ppp/widgets/custom_text_form_field.dart';
 
 // ignore_for_file: must_be_immutable
 class SettingsScreen extends StatelessWidget {
@@ -12,7 +12,7 @@ class SettingsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            backgroundColor: appTheme.gray5001.withOpacity(0.82),
+            backgroundColor: theme.colorScheme.onError,
             resizeToAvoidBottomInset: false,
             body: SizedBox(
                 width: double.maxFinite,
@@ -48,51 +48,47 @@ class SettingsScreen extends StatelessWidget {
                                                         getHorizontalSize(
                                                             0.41))))
                                   ]))),
-                      GestureDetector(
-                          onTap: () {
-                            onTapRowovaltwo(context);
-                          },
-                          child: Container(
-                              width: double.maxFinite,
-                              margin: getMargin(top: 20),
-                              padding: getPadding(top: 9, bottom: 9),
-                              decoration: AppDecoration.outline11,
-                              child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.end,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    CustomImageView(
-                                        imagePath: ImageConstant.imgOval257x67,
-                                        height: getVerticalSize(57),
-                                        width: getHorizontalSize(67),
-                                        margin: getMargin(bottom: 15)),
-                                    Padding(
-                                        padding: getPadding(
-                                            left: 22, top: 14, bottom: 31),
-                                        child: Text("Momar Seck",
-                                            overflow: TextOverflow.ellipsis,
-                                            textAlign: TextAlign.left,
-                                            style: theme.textTheme.titleLarge)),
-                                    Container(
-                                        height: getVerticalSize(44),
-                                        width: getHorizontalSize(124),
-                                        margin: getMargin(
-                                            left: 42, top: 14, bottom: 14),
-                                        padding: getPadding(
-                                            left: 16,
-                                            top: 15,
-                                            right: 16,
-                                            bottom: 15),
-                                        decoration: AppDecoration.fill1,
-                                        child: Stack(children: [
-                                          CustomImageView(
-                                              svgPath: ImageConstant
-                                                  .imgArrowrightBlack900,
-                                              height: getVerticalSize(13),
-                                              width: getHorizontalSize(8),
-                                              alignment: Alignment.topRight)
-                                        ]))
-                                  ]))),
+                      Container(
+                          width: double.maxFinite,
+                          margin: getMargin(top: 20),
+                          padding: getPadding(top: 9, bottom: 9),
+                          decoration: AppDecoration.outline12,
+                          child: Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                CustomImageView(
+                                    imagePath: ImageConstant.imgOval257x67,
+                                    height: getVerticalSize(57),
+                                    width: getHorizontalSize(67),
+                                    margin: getMargin(bottom: 15)),
+                                Padding(
+                                    padding: getPadding(
+                                        left: 22, top: 14, bottom: 31),
+                                    child: Text("Momar Seck",
+                                        overflow: TextOverflow.ellipsis,
+                                        textAlign: TextAlign.left,
+                                        style: theme.textTheme.titleLarge)),
+                                Container(
+                                    height: getVerticalSize(44),
+                                    width: getHorizontalSize(124),
+                                    margin: getMargin(
+                                        left: 42, top: 14, bottom: 14),
+                                    padding: getPadding(
+                                        left: 16,
+                                        top: 15,
+                                        right: 16,
+                                        bottom: 15),
+                                    decoration: AppDecoration.fill1,
+                                    child: Stack(children: [
+                                      CustomImageView(
+                                          svgPath: ImageConstant
+                                              .imgArrowrightBlack900,
+                                          height: getVerticalSize(13),
+                                          width: getHorizontalSize(8),
+                                          alignment: Alignment.topRight)
+                                    ]))
+                              ])),
                       Container(
                           height: getVerticalSize(44),
                           width: double.maxFinite,
@@ -343,8 +339,9 @@ class SettingsScreen extends StatelessWidget {
                                                       width: getHorizontalSize(
                                                           207),
                                                       decoration: BoxDecoration(
-                                                          color: appTheme
-                                                              .whiteA700))),
+                                                          color: theme
+                                                              .colorScheme
+                                                              .primary))),
                                               Align(
                                                   alignment:
                                                       Alignment.bottomRight,
@@ -412,15 +409,15 @@ class SettingsScreen extends StatelessWidget {
                                         .bodyLargeOnPrimaryContainer,
                                     alignment: Alignment.centerLeft,
                                     filled: true,
-                                    fillColor: appTheme.whiteA700,
+                                    fillColor: theme.colorScheme.primary,
                                     defaultBorderDecoration:
-                                        TextFormFieldStyleHelper.fillWhiteA700,
+                                        TextFormFieldStyleHelper.fillPrimary,
                                     enabledBorderDecoration:
-                                        TextFormFieldStyleHelper.fillWhiteA700,
+                                        TextFormFieldStyleHelper.fillPrimary,
                                     focusedBorderDecoration:
-                                        TextFormFieldStyleHelper.fillWhiteA700,
+                                        TextFormFieldStyleHelper.fillPrimary,
                                     disabledBorderDecoration:
-                                        TextFormFieldStyleHelper.fillWhiteA700)
+                                        TextFormFieldStyleHelper.fillPrimary)
                               ])),
                       Expanded(
                           child: SizedBox(
@@ -431,18 +428,13 @@ class SettingsScreen extends StatelessWidget {
                                   child: Column(
                                       mainAxisAlignment: MainAxisAlignment.end,
                                       children: [
-                                        GestureDetector(
-                                            onTap: () {
-                                              onTapTxtLabelsix(context);
-                                            },
-                                            child: Padding(
-                                                padding: getPadding(top: 10),
-                                                child: Text("Se déconnecter",
-                                                    overflow:
-                                                        TextOverflow.ellipsis,
-                                                    textAlign: TextAlign.left,
-                                                    style: TextThemeHelper
-                                                        .bodyLargeGray400))),
+                                        Padding(
+                                            padding: getPadding(top: 10),
+                                            child: Text("Se déconnecter",
+                                                overflow: TextOverflow.ellipsis,
+                                                textAlign: TextAlign.left,
+                                                style: TextThemeHelper
+                                                    .bodyLargeGray400)),
                                         Padding(
                                             padding: getPadding(top: 10),
                                             child: Divider(
@@ -459,23 +451,5 @@ class SettingsScreen extends StatelessWidget {
   /// to navigate back to the previous screen.
   onTapImgArrowleft(BuildContext context) {
     Navigator.pop(context);
-  }
-
-  /// Navigates to the myAccountScreen when the action is triggered.
-  ///
-  /// The [BuildContext] parameter is used to build the navigation stack.
-  /// When the action is triggered, this function uses the `Navigator` widget
-  /// to push the named route for the myAccountScreen.
-  onTapRowovaltwo(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.myAccountScreen);
-  }
-
-  /// Navigates to the signInTabContainerScreen when the action is triggered.
-  ///
-  /// The [BuildContext] parameter is used to build the navigation stack.
-  /// When the action is triggered, this function uses the `Navigator` widget
-  /// to push the named route for the signInTabContainerScreen.
-  onTapTxtLabelsix(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.signInTabContainerScreen);
   }
 }
