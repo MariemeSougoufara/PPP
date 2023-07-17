@@ -10,125 +10,130 @@ class SplashScreensScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: appTheme.yellow600,
-        body: SizedBox(
-          width: double.maxFinite,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Spacer(),
-              Container(
-                margin: getMargin(
-                  left: 128,
-                  right: 127,
-                ),
-                decoration: AppDecoration.fill1.copyWith(
-                  borderRadius: BorderRadiusStyle.roundedBorder34,
-                ),
-                child: Card(
-                  clipBehavior: Clip.antiAlias,
-                  elevation: 0,
-                  margin: EdgeInsets.all(0),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadiusStyle.roundedBorder34,
-                  ),
-                  child: Container(
-                    height: getSize(
-                      120,
+    //Ajouter par maryam pour la route
+    return GestureDetector(
+        onTap: () {
+          Navigator.pushNamed(context, AppRoutes.onboardingOneScreen);
+        },
+        child: SafeArea(
+          child: Scaffold(
+            backgroundColor: appTheme.yellow600,
+            body: SizedBox(
+              width: double.maxFinite,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Spacer(),
+                  Container(
+                    margin: getMargin(
+                      left: 128,
+                      right: 127,
                     ),
-                    width: getSize(
-                      120,
-                    ),
-                    decoration: BoxDecoration(
+                    decoration: AppDecoration.fill1.copyWith(
                       borderRadius: BorderRadiusStyle.roundedBorder34,
-                      image: DecorationImage(
-                        image: fs.Svg(
-                          ImageConstant.imgGroup342,
+                    ),
+                    child: Card(
+                      clipBehavior: Clip.antiAlias,
+                      elevation: 0,
+                      margin: EdgeInsets.all(0),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadiusStyle.roundedBorder34,
+                      ),
+                      child: Container(
+                        height: getSize(
+                          120,
                         ),
-                        fit: BoxFit.cover,
+                        width: getSize(
+                          120,
+                        ),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadiusStyle.roundedBorder34,
+                          image: DecorationImage(
+                            image: fs.Svg(
+                              ImageConstant.imgGroup342,
+                            ),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        child: Stack(
+                          alignment: Alignment.bottomLeft,
+                          children: [
+                            CustomImageView(
+                              imagePath: ImageConstant.imgFill1copy,
+                              height: getVerticalSize(
+                                73,
+                              ),
+                              width: getHorizontalSize(
+                                112,
+                              ),
+                              alignment: Alignment.bottomRight,
+                            ),
+                            CustomImageView(
+                              svgPath: ImageConstant.imgVolume,
+                              height: getVerticalSize(
+                                45,
+                              ),
+                              width: getHorizontalSize(
+                                57,
+                              ),
+                              alignment: Alignment.bottomLeft,
+                            ),
+                            CustomImageView(
+                              svgPath: ImageConstant.imgLightbulb,
+                              height: getSize(
+                                68,
+                              ),
+                              width: getSize(
+                                68,
+                              ),
+                              radius: BorderRadius.circular(
+                                getHorizontalSize(
+                                  34,
+                                ),
+                              ),
+                              alignment: Alignment.center,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                    child: Stack(
-                      alignment: Alignment.bottomLeft,
-                      children: [
-                        CustomImageView(
-                          imagePath: ImageConstant.imgFill1copy,
-                          height: getVerticalSize(
-                            73,
-                          ),
-                          width: getHorizontalSize(
-                            112,
-                          ),
-                          alignment: Alignment.bottomRight,
-                        ),
-                        CustomImageView(
-                          svgPath: ImageConstant.imgVolume,
-                          height: getVerticalSize(
-                            45,
-                          ),
-                          width: getHorizontalSize(
-                            57,
-                          ),
-                          alignment: Alignment.bottomLeft,
-                        ),
-                        CustomImageView(
-                          svgPath: ImageConstant.imgLightbulb,
-                          height: getSize(
-                            68,
-                          ),
-                          width: getSize(
-                            68,
-                          ),
-                          radius: BorderRadius.circular(
-                            getHorizontalSize(
-                              34,
-                            ),
-                          ),
-                          alignment: Alignment.center,
-                        ),
-                      ],
+                  ),
+                  CustomImageView(
+                    svgPath: ImageConstant.imgOval,
+                    height: getVerticalSize(
+                      12,
+                    ),
+                    width: getHorizontalSize(
+                      102,
                     ),
                   ),
-                ),
+                  Padding(
+                    padding: getPadding(
+                      top: 40,
+                    ),
+                    child: Text(
+                      "Ñiu Deem !",
+                      overflow: TextOverflow.ellipsis,
+                      textAlign: TextAlign.left,
+                      style: theme.textTheme.displayLarge,
+                    ),
+                  ),
+                  CustomImageView(
+                    imagePath: ImageConstant.imgGroup2,
+                    height: getVerticalSize(
+                      236,
+                    ),
+                    width: getHorizontalSize(
+                      375,
+                    ),
+                    margin: getMargin(
+                      top: 142,
+                    ),
+                  ),
+                ],
               ),
-              CustomImageView(
-                svgPath: ImageConstant.imgOval,
-                height: getVerticalSize(
-                  12,
-                ),
-                width: getHorizontalSize(
-                  102,
-                ),
-              ),
-              Padding(
-                padding: getPadding(
-                  top: 40,
-                ),
-                child: Text(
-                  "Ñiu Deem !",
-                  overflow: TextOverflow.ellipsis,
-                  textAlign: TextAlign.left,
-                  style: theme.textTheme.displayLarge,
-                ),
-              ),
-              CustomImageView(
-                imagePath: ImageConstant.imgGroup2,
-                height: getVerticalSize(
-                  236,
-                ),
-                width: getHorizontalSize(
-                  375,
-                ),
-                margin: getMargin(
-                  top: 142,
-                ),
-              ),
-            ],
+            ),
           ),
-        ),
-      ),
-    );
+        ));
   }
 }

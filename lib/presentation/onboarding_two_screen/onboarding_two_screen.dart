@@ -10,7 +10,12 @@ class OnboardingTwoScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    //Ajouter par maryam pour la route
+    return GestureDetector(
+        onTap: () {
+          Navigator.pushNamed(context, AppRoutes.onboardingThreeScreen);
+        },
+    child: SafeArea(
       child: Scaffold(
         backgroundColor: theme.colorScheme.primary,
         body: Container(
@@ -201,6 +206,7 @@ class OnboardingTwoScreen extends StatelessWidget {
           ),
         ),
       ),
-    );
+    ))
+  ;
   }
 }
